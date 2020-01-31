@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SystemBase : MonoBehaviour
+public abstract class SystemBase : MonoBehaviour
 {
     [SerializeField] string paramaterName;
     [SerializeField] float startingParamater;
@@ -11,10 +11,12 @@ public class SystemBase : MonoBehaviour
     [SerializeField] float step;
     protected float currentParamater;
     protected bool isPowered;
-    [SerializeField] ConnectPoint connectPoint;
+    [SerializeField] GameObject powerSourceObject;
+    PowerSource powerSource;
 
     private void Start()
     {
+        powerSource = powerSourceObject.GetComponent<PowerSource>();
         currentParamater = startingParamater;
         StartMe();
     }
@@ -24,15 +26,25 @@ public class SystemBase : MonoBehaviour
 
     }
 
+    public void Increase(float stepProportion)
+    {
+        currentParamater += step * Time.deltaTime * stepProportion;
+        currentParamater = Mathf.Clamp(currentParamater, minParamater, maxParamater);
+    }
+
     public void Increase()
     {
-        currentParamater += step * Time.deltaTime;
-        currentParamater = Mathf.Clamp(currentParamater, minParamater, maxParamater);
+        Increase(1f);
     }
 
     public void Decrease ()
     {
-        currentParamater -= step * Time.deltaTime;
+        Decrease(1f);
+    }
+
+    public void Decrease(float stepProportion)
+    {
+        currentParamater -= step * Time.deltaTime * stepProportion;
         currentParamater = Mathf.Clamp(currentParamater, minParamater, maxParamater);
     }
 
@@ -68,7 +80,7 @@ public class SystemBase : MonoBehaviour
 
     void CheckPower()
     {
-        isPowered = connectPoint.IsPowered();
+        isPowered = powerSource.IsPowered();
     }
 
     protected virtual void UpdateMe()
