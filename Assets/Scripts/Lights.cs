@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Lights : SystemBase
 {
-    List<GameObject> lights;
+    [SerializeField] List<GameObject> lights;
 
     protected override void UpdateMe()
     {

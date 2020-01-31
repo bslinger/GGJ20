@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SlowRotate : SystemBase
 {
+    [SerializeField] Transform target;
+
     // Update is called once per frame
     protected override void UpdateMe()
     {
@@ -15,6 +17,6 @@ public class SlowRotate : SystemBase
         {
             Increase();
         }
-        transform.Rotate(Vector3.forward * currentParamater);
+        target.Rotate(Vector3.forward * currentParamater);
     }
 }
