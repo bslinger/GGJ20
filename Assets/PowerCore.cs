@@ -5,8 +5,8 @@ using UnityEngine;
 public class PowerCore : MonoBehaviour
 {
 
-    public ConnectPoint hoverPoint;
-    public ConnectPoint connectedPoint;
+    private ConnectPoint hoverPoint;
+    private ConnectPoint connectedPoint;
 
     public bool powered;
 
@@ -27,14 +27,10 @@ public class PowerCore : MonoBehaviour
         hoverPoint = point;
     }
 
-    public void ConnectToPoint()
+    public void ConnectToPoint(ConnectPoint point)
     {
-        if (hoverPoint == null)
-        {
-            Debug.LogError("Tried to connect to point when not hovering");
-            return;
-        }
-        connectedPoint = hoverPoint;
+
+        connectedPoint = point;
         hoverPoint = null;
         
         connectedPoint.ConnectCore(this);
@@ -46,7 +42,7 @@ public class PowerCore : MonoBehaviour
         Debug.Log("Detached from hand");
         if (hoverPoint != null)
         {
-            ConnectToPoint();
+            ConnectToPoint(hoverPoint);
         }
     }
 

@@ -7,13 +7,18 @@ public class ConnectPoint : MonoBehaviour
 
     public GameObject ghostCylinderPrefab;
 
+    public PowerCore connectedCore;
+
     bool ghostShowing;
-    PowerCore connectedCore;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (connectedCore != null)
+        {
+            connectedCore.ConnectToPoint(this);
+        } 
     }
 
     // Update is called once per frame
