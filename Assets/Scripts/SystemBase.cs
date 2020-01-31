@@ -11,6 +11,7 @@ public class SystemBase : MonoBehaviour
     [SerializeField] float step;
     protected float currentParamater;
     protected bool isPowered;
+    [SerializeField] ConnectPoint connectPoint;
 
     private void Start()
     {
@@ -67,8 +68,7 @@ public class SystemBase : MonoBehaviour
 
     void CheckPower()
     {
-        isPowered = false;
-        // TODO: Check for power
+        isPowered = connectPoint.IsPowered();
     }
 
     protected virtual void UpdateMe()
