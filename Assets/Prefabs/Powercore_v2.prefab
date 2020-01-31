@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3779012327204247777}
   - component: {fileID: 4184498430664999955}
   m_Layer: 0
-  m_Name: Powercore
+  m_Name: Powercore_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5162,7 +5162,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
 --- !u!114 &3549206333946342571
