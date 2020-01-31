@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConnectPoint : MonoBehaviour
+public class ConnectPoint : MonoBehaviour, PowerSource
 {
 
     public GameObject ghostCylinderPrefab;
@@ -73,4 +73,9 @@ public class ConnectPoint : MonoBehaviour
         }
         return connectedCore.powered;
     }
+}
+
+public interface PowerSource
+{
+    bool IsPowered();
 }
