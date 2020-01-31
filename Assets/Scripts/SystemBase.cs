@@ -16,7 +16,15 @@ public abstract class SystemBase : MonoBehaviour
 
     private void Start()
     {
-        powerSource = powerSourceObject.GetComponent<PowerSource>();
+        if (powerSourceObject)
+        {
+            powerSource = powerSourceObject.GetComponent<PowerSource>();
+        }
+        if (!powerSourceObject || powerSource == null)
+        {
+            Debug.LogError("Power source has not been assigned for this system. System " + name + " will be disabled.", this);
+            gameObject.SetActive(false);
+        }
         currentParamater = startingParamater;
         StartMe();
     }

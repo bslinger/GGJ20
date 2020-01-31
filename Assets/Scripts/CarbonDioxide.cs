@@ -8,11 +8,11 @@ public class CarbonDioxide : SystemBase
     {
         if (isPowered)
         {
-            Increase();
+            Decrease();
         }
         else
         {
-            Decrease();
+            Increase();
         }
     }
 }
