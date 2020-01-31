@@ -18,7 +18,7 @@ public class ForcePuller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        activeAction.AddOnStateDownListener(this.PullTriggered, handRef);
+        //activeAction.AddOnStateDownListener(this.PullTriggered, handRef);
     }
 
     // Update is called once per frame
@@ -34,7 +34,11 @@ public class ForcePuller : MonoBehaviour
                 pointingAt = hit.collider.gameObject;
                 Debug.Log("hit interactable");
                 pointingAt = hit.collider.gameObject;
-
+                if (activeAction.state)
+                {
+                    Vector3 difference = (transform.position - pointingAt.transform.position);
+                    pointingAt.GetComponent<Rigidbody>().AddForce(difference.normalized * pullForce);
+                }
                 
             }
             else
@@ -53,7 +57,7 @@ public class ForcePuller : MonoBehaviour
         Debug.Log("Trigger pulled");
         if (pointingAt != null)
         {
-            pointingAt.GetComponent<Rigidbody>().AddForce((transform.position - pointingAt.transform.position).normalized * pullForce);
+            
         }
         
     }
