@@ -62,6 +62,7 @@ public class ConnectPoint : MonoBehaviour
     {
         connectedCore.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         GetComponent<CapsuleCollider>().enabled = true;
+        connectedCore = null;
     }
 
     public bool IsPowered()

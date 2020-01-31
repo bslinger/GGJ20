@@ -10,6 +10,7 @@ public class Lights : SystemBase
     {
         if (isPowered)
         {
+            Increase();
             foreach (GameObject light in lights)
             {
                 light.SetActive(true);
@@ -17,8 +18,10 @@ public class Lights : SystemBase
         }
         else
         {
+            Decrease();
             foreach (GameObject light in lights)
             {
+                
                 light.SetActive(false);
             }
         }
