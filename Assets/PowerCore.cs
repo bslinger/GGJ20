@@ -55,7 +55,6 @@ public class PowerCore : MonoBehaviour
         {
             ConnectToPoint(hoverPoint);
         }
-        PowerUp();
     }
 
     public void OnAttachedToHand()
@@ -66,7 +65,6 @@ public class PowerCore : MonoBehaviour
             connectedPoint.DisconnectCore();
             connectedPoint = null;
         }
-        PowerDown();
     }
 
     public void BurnOut()
