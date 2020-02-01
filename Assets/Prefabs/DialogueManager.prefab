@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrativeEvents:
-  - triggerPercentage: 0.1
+  - triggerPercentage: 0.07
     eventToFire:
       m_PersistentCalls:
         m_Calls:
@@ -59,7 +59,34 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    nodeToPlay: 
     waitForDialogue: 1
+    triggered: 0
+  - triggerPercentage: 0.1
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls: []
+    nodeToPlay: Exposition1
+    waitForDialogue: 0
+    triggered: 0
+  - triggerPercentage: 0.2
+    eventToFire:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6927582361449924092}
+          m_MethodName: SecondCoreBreak
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    nodeToPlay: 
+    waitForDialogue: 0
     triggered: 0
   comms: {fileID: 0}
   dialogueRunner: {fileID: 0}
+  hasFailed: 0

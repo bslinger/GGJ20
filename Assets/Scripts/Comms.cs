@@ -159,6 +159,7 @@ public class Comms : SystemBase
     public void OnDialogueStart()
     {
         Debug.Log("Dialogue Started");
+        textMesh.text = "";
         textMesh.gameObject.SetActive(true);
         commsUI.gameObject.GetComponent<AudioSource>().PlayOneShot(messageStartAudio);
     }
@@ -173,6 +174,9 @@ public class Comms : SystemBase
         // show transmission end screen, play sound
         yield return new WaitForSeconds(delay);
         textMesh.gameObject.SetActive(false);
+        textMesh.text = "";
+        buffer.Clear();
+        currentLine = "";
         commsUI.gameObject.GetComponent<AudioSource>().PlayOneShot(messageEndAudio);
         Transform transform1 = dialogueCanvas.transform.Find("TransmissionEndPanel");
         transform1.gameObject.SetActive(true);

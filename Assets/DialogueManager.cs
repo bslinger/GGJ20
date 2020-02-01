@@ -11,6 +11,7 @@ public struct NarrativeEvent
     public float triggerPercentage;
     //public string eventToFire;
     public UnityEvent eventToFire;
+    public string nodeToPlay;
     public bool waitForDialogue;
     public bool triggered;
 }
@@ -22,6 +23,8 @@ public class DialogueManager : MonoBehaviour
 
     public Comms comms;
     public DialogueRunner dialogueRunner;
+
+    public bool hasFailed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -43,8 +46,14 @@ public class DialogueManager : MonoBehaviour
                     continue;
                 }
                 // remove from array and trigger
-               // triggered.Add(ev);
-                ev.eventToFire.Invoke();
+                if (ev.eventToFire != null)
+                {
+                    ev.eventToFire.Invoke();
+                }
+                if (ev.nodeToPlay != null)
+                {
+                    dialogueRunner.StartDialogue(ev.nodeToPlay);
+                }
                 ev.triggered = true;
                 narrativeEvents[i] = ev;
             }
@@ -54,10 +63,15 @@ public class DialogueManager : MonoBehaviour
 
     public void FirstCoreBreak()
     {
-        StartCoroutine(FirstCoreBreakRoutine());
+        StartCoroutine(CoreBreakRoutine("FirstCoreBreak"));
     }
 
-    public IEnumerator FirstCoreBreakRoutine()
+    public void SecondCoreBreak()
+    {
+        StartCoroutine(CoreBreakRoutine("SecondCoreBreak"));
+    }
+
+    public IEnumerator CoreBreakRoutine(string node)
     {
         PowerCore brokenCore = null;
         PowerCore[] cores = FindObjectsOfType<PowerCore>();
@@ -75,7 +89,18 @@ public class DialogueManager : MonoBehaviour
             brokenCore.BurnOut();
         }
         yield return new WaitForSeconds(3f);
-        dialogueRunner.StartDialogue("FirstCoreBreak");
+        dialogueRunner.StartDialogue(node);
+    }
+
+    public void FailWithNode(string node)
+    {
+        hasFailed = true;
+        dialogueRunner.StartDialogue(node);
+    }
+
+    public void StartFromNode(string node)
+    {
+       
     }
 
 }
