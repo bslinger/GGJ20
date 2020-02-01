@@ -51,11 +51,16 @@ MonoBehaviour:
   step: 0.01
   powerSourceObject: {fileID: 0}
   isDebug: 0
-  commsUI: {fileID: 0}
   maxLines: 10
-  lineDelay: 0.1
-  initialDistance: 1000
+  lineDelay: 0.2
+  startNode: Start
+  commsUI: {fileID: 0}
+  signalStrengthSlider: {fileID: 0}
+  initialDistance: 10000
   fullyPoweredStepPerSecond: 1
+  messageStartAudio: {fileID: 8300000, guid: 4c297a8bef236a0439c2b72b6d4d706e, type: 3}
+  messageEndAudio: {fileID: 8300000, guid: b63b5c6f68faaee47ba73d31e4e28eae, type: 3}
+  characterAudio: {fileID: 8300000, guid: 4618564d08624de4dac526a7daae79d9, type: 3}
   stringEvent:
     m_PersistentCalls:
       m_Calls: []

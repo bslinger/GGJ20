@@ -54,8 +54,13 @@ public class DialogueManager : MonoBehaviour
 
     public void FirstCoreBreak()
     {
+        StartCoroutine(FirstCoreBreakRoutine());
+    }
+
+    public IEnumerator FirstCoreBreakRoutine()
+    {
         PowerCore brokenCore = null;
-        PowerCore[]cores = FindObjectsOfType<PowerCore>();
+        PowerCore[] cores = FindObjectsOfType<PowerCore>();
         foreach (PowerCore core in cores)
         {
             if (core.powered && core.GetPoweredPoint() != "CommsConnectPoint")
@@ -69,7 +74,8 @@ public class DialogueManager : MonoBehaviour
         {
             brokenCore.BurnOut();
         }
+        yield return new WaitForSeconds(3f);
         dialogueRunner.StartDialogue("FirstCoreBreak");
-        
     }
+
 }
