@@ -304,9 +304,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 5
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 5
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -575,7 +575,7 @@ PrefabInstance:
     - target: {fileID: 2546446925413924973, guid: dfbcbcf81a0424a48917e6dfed33ba83,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -29.1
+      value: -23.5
       objectReference: {fileID: 0}
     - target: {fileID: 2546446925413924973, guid: dfbcbcf81a0424a48917e6dfed33ba83,
         type: 3}

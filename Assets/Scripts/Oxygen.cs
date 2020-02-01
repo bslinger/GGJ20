@@ -29,7 +29,8 @@ public class Oxygen : SystemBase
 
     protected override void UpdateUI()
     {
-        float proportionalValue = (maxParameter - currentParameter) / (maxParameter - minParameter);
+        float proportionalValue = (currentParameter - minParameter) / (maxParameter - minParameter);
+        Debug.Log(proportionalValue);
         if (slider)
         {
             slider.value = proportionalValue;
