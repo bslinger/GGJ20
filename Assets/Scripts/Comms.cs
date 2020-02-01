@@ -4,7 +4,10 @@ using UnityEngine;
 using Yarn.Unity;
 using System;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using TMPro;
+
+[Serializable] public class StringEvent : UnityEvent<string> { }
 
 public class Comms : SystemBase
 {
