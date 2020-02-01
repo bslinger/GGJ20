@@ -23,7 +23,7 @@ public class ForcePuller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //activeAction.AddOnStateDownListener(this.PullTriggered, handRef);
+        activeAction.AddOnStateDownListener(this.PullTriggered, handRef);
         hand = GetComponentInParent<Hand>();
     }
 
@@ -35,34 +35,11 @@ public class ForcePuller : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {
            
-            if (hit.collider.gameObject.GetComponent<Interactable>() != null)
+            if (hit.collider.gameObject.GetComponentInParent<Interactable>() != null)
             {
                 pointingAt = hit.collider.gameObject;
-                Debug.Log("hit interactable");
-                pointingAt = hit.collider.gameObject;
-                if (activeAction.state)
-                {
-                    Vector3 difference = (transform.position - pointingAt.transform.position);
-                    float sqrMagnitude = difference.sqrMagnitude;
-                    Debug.Log($"Distance {sqrMagnitude}");
-                    float finalPullForce = pullForce;
-                    if (sqrMagnitude < slowDistance)
-                    {
-                        //finalPullForce -= pullForce / (slowDistance - sqrMagnitude);
-                        Debug.Log($"Final pull force: {finalPullForce}");
-                    }
-                    if (sqrMagnitude < snapDistance)
-                    {
-                        hand.AttachObject(pointingAt, GrabTypes.Grip);
-                    }
-                    else
-                    {
-                        pointingAt.GetComponent<Rigidbody>().AddForce(difference.normalized * finalPullForce);
-                    }
-                    
-
-                }
-                
+               
+            
             }
             else
             {
@@ -80,7 +57,7 @@ public class ForcePuller : MonoBehaviour
         Debug.Log("Trigger pulled");
         if (pointingAt != null)
         {
-            
+            hand.AttachObject(pointingAt.GetComponent<Interactable>().gameObject, GrabTypes.Grip, Hand.AttachmentFlags.VelocityMovement & Hand.AttachmentFlags.SnapOnAttach);
         }
         
     }

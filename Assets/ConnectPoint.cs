@@ -53,8 +53,14 @@ public class ConnectPoint : MonoBehaviour, PowerSource
     public void ConnectCore(PowerCore core)
     {
         connectedCore = core;
+        Transform attachpointOffsetTransform = connectedCore.transform.Find("ConnectAttachPoint");
+
+     
+
         connectedCore.transform.position = transform.position;
         connectedCore.transform.rotation = transform.rotation;
+        connectedCore.transform.Translate(-attachpointOffsetTransform.localPosition,Space.Self);
+      
         connectedCore.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         GetComponent<CapsuleCollider>().enabled = false;
         ghostCylinderPrefab.SetActive(false);
