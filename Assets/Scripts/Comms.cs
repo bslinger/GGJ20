@@ -51,7 +51,6 @@ public class Comms : SystemBase
 
     protected override void StartMe()
     {
-
         dialogueRunner = commsUI.GetComponentInChildren<DialogueRunner>();
         dialogueCanvas = commsUI.transform.Find("Dialogue Canvas").gameObject;
         textMesh = dialogueCanvas.GetComponentInChildren<TextMeshProUGUI>();
@@ -91,6 +90,8 @@ public class Comms : SystemBase
             dialogueRunner.StartDialogue(startNode);
             hasStarted = true;
         }
+        commsUI.gameObject.GetComponent<AudioSource>().mute = false;
+        
     }
 
     void ChangeToUnpowered()
@@ -100,6 +101,7 @@ public class Comms : SystemBase
         textMesh.text = "";
         dialogueRunner.Stop();
         dialogueCanvas.SetActive(false);
+        commsUI.gameObject.GetComponent<AudioSource>().mute = true;
     }
 
     public void EndLine()

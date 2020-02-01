@@ -54,8 +54,12 @@ MonoBehaviour:
   commsUI: {fileID: 0}
   maxLines: 10
   lineDelay: 0.1
+  startNode: Start
   initialDistance: 1000
   fullyPoweredStepPerSecond: 1
+  messageStartAudio: {fileID: 8300000, guid: 4c297a8bef236a0439c2b72b6d4d706e, type: 3}
+  messageEndAudio: {fileID: 8300000, guid: b63b5c6f68faaee47ba73d31e4e28eae, type: 3}
+  characterAudio: {fileID: 8300000, guid: 4618564d08624de4dac526a7daae79d9, type: 3}
   stringEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -69,7 +73,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fd2b81a142505494f9128b18ce688f77, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 68c27e8bd72cdc949b9b6af1aab2c64d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
