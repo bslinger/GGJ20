@@ -21,6 +21,7 @@
           <e p="CarbonDioxide.cs" t="Include" />
           <e p="Comms.cs" t="Include" />
           <e p="Crygenics.cs" t="Include" />
+          <e p="FadeIn.cs" t="Include" />
           <e p="LifeSupport.cs" t="Include" />
           <e p="Lights.cs" t="Include" />
           <e p="Oxygen.cs" t="Include" />

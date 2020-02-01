@@ -14,7 +14,10 @@ public class Crygenics : SystemBase
     [SerializeField] Slider temperatureSlider;
     [SerializeField] GameObject alarm;
     
-    [SerializeField] StatusLightControllers[] statusLightControllers;
+    [SerializeField] List<GameObject> cryoBeds;
+    
+    private int nextDead = 0;
+    private StatusLights nextDeadStatusLights;
 
     int aliveHumans;
     float deathTimer;
@@ -22,8 +25,9 @@ public class Crygenics : SystemBase
     override protected void StartMe()
     {
         aliveHumans = startingHumans;
+        nextDeadStatusLights = cryoBeds[nextDead].GetComponent<StatusLights>();
     }
-
+    
 
     // Update is called once per frame
     override protected void UpdateMe()
@@ -39,10 +43,31 @@ public class Crygenics : SystemBase
         if (currentParamater < deathTemperature)
         {
             deathTimer += Time.deltaTime;
+            float deathPercentage = deathTimer / timeBetweenDeaths;
+            if ( nextDeadStatusLights ) {
+                if (deathPercentage > 0.5f)
+                {
+                    nextDeadStatusLights.SetStatus(2);
+                } else if (deathPercentage > 0f)
+                {
+                    nextDeadStatusLights.SetStatus(1);
+                }
+            }
             if (deathTimer > timeBetweenDeaths)
             {
+                nextDeadStatusLights.SetStatus(3);
                 deathTimer = 0;
                 aliveHumans -= 1;
+                nextDead++;
+                if (nextDead < cryoBeds.Count)
+                {
+                    nextDeadStatusLights = cryoBeds[nextDead].GetComponent<StatusLights>();
+                }
+                else
+                {
+                    nextDeadStatusLights = null;
+                }
+
                 Debug.Log("A hummie died");
             }
         }
@@ -60,18 +85,10 @@ public class Crygenics : SystemBase
             if (proportionalValue >= 0.5f)
             {
                 alarm.SetActive(true);
-                foreach( StatusLights statusLightController in statusLightControllers )
-                {
-                    statusLightControllers.SetStatus(1);
-                }
             }
             else
             {
                 alarm.SetActive(false);
-                foreach( StatusLights statusLightController in statusLightControllers )
-                {
-                    statusLightControllers.SetStatus(0);
-                }
             }
         }
         if (deadHumansSlider)
