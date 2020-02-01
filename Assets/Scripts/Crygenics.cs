@@ -22,9 +22,20 @@ public class Crygenics : SystemBase
     int aliveHumans;
     float deathTimer;
 
-    override protected void StartMe()
-    {
+    override protected void StartMe() {
+        
+        // Shuffle order of beds
+        for (int i = 0; i < cryoBeds.Count; i++) {
+            GameObject temp = cryoBeds[i];
+            int randomIndex = Random.Range(i, cryoBeds.Count);
+            cryoBeds[i] = cryoBeds[randomIndex];
+            cryoBeds[randomIndex] = temp;
+        }
+
+        startingHumans = cryoBeds.Count;
+        
         aliveHumans = startingHumans;
+        
         nextDeadStatusLights = cryoBeds[nextDead].GetComponent<StatusLights>();
     }
     
@@ -78,7 +89,6 @@ public class Crygenics : SystemBase
         float proportionalValue = (maxParameter - currentParameter) / (maxParameter - minParameter);
         if (temperatureText)
         {
-            temperatureSlider.value = proportionalValue;
             temperatureText.text = (int)currentParameter + "C";
             if (proportionalValue < 0.5f)
             {
