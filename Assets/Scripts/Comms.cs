@@ -100,7 +100,6 @@ public class Comms : SystemBase
 
     void ChangeToPowered()
     {
-        dialogueCanvas.SetActive(true);
         if (!hasStarted)
         {
             dialogueRunner.StartDialogue(startNode);
@@ -113,10 +112,6 @@ public class Comms : SystemBase
     void ChangeToUnpowered()
     {
         // save the node we were on so we can start it back up next time
-        lastNode = dialogueRunner.dialogue.currentNode;
-        textMesh.text = "";
-        dialogueRunner.Stop();
-        dialogueCanvas.SetActive(false);
         commsUI.gameObject.GetComponent<AudioSource>().mute = true;
     }
 

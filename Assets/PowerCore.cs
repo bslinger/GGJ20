@@ -16,10 +16,13 @@ public class PowerCore : MonoBehaviour
     public GameObject sparkPrefab;
     public GameObject smokePrefab;
 
+    private Light pointLight;
+
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<Rigidbody>().angularVelocity = new Vector3(initialAngularVelocity, initialAngularVelocity);
+        pointLight = transform.Find("Point Light").gameObject.GetComponent<Light>();
         if (powered)
         {
             PowerUp();
@@ -74,7 +77,8 @@ public class PowerCore : MonoBehaviour
     {
         PowerDown();
         Transform sparkTransform = transform.Find("SparkPoint");
-        Instantiate(sparkPrefab, sparkTransform.position, sparkTransform.rotation);
+        Instantiate(sparkPrefab, sparkTransform.position, sparkTransform.rotation, transform);
+        Instantiate(smokePrefab, sparkTransform.position, sparkTransform.rotation, transform);
         // particle systems and sounds
     }
 
@@ -87,6 +91,7 @@ public class PowerCore : MonoBehaviour
         Material[] mats = meshRenderer.materials;
         mats[1] = unpoweredMaterial;
         meshRenderer.materials = mats;
+        pointLight.gameObject.SetActive(false);
     }
 
     public void PowerUp()
@@ -97,6 +102,8 @@ public class PowerCore : MonoBehaviour
         Material[] mats = meshRenderer.materials;
         mats[1] = poweredMaterial;
         meshRenderer.materials = mats;
+        pointLight.gameObject.SetActive(true);
+
     }
 
     public string GetPoweredPoint()
