@@ -13,15 +13,32 @@ public class Crygenics : SystemBase
     [SerializeField] Slider aliveHumansSlider;
     [SerializeField] Text temperatureText;
     [SerializeField] GameObject alarm;
+    
+    [SerializeField] List<GameObject> cryoBeds;
+    
+    private int nextDead = 0;
+    private StatusLights nextDeadStatusLights;
 
     int aliveHumans;
     float deathTimer;
 
-    override protected void StartMe()
-    {
-        aliveHumans = startingHumans;
-    }
+    override protected void StartMe() {
+        
+        // Shuffle order of beds
+        for (int i = 0; i < cryoBeds.Count; i++) {
+            GameObject temp = cryoBeds[i];
+            int randomIndex = Random.Range(i, cryoBeds.Count);
+            cryoBeds[i] = cryoBeds[randomIndex];
+            cryoBeds[randomIndex] = temp;
+        }
 
+        startingHumans = cryoBeds.Count;
+        
+        aliveHumans = startingHumans;
+        
+        nextDeadStatusLights = cryoBeds[nextDead].GetComponent<StatusLights>();
+    }
+    
 
     // Update is called once per frame
     override protected void UpdateMe()
@@ -37,10 +54,31 @@ public class Crygenics : SystemBase
         if (currentParameter < deathTemperature)
         {
             deathTimer += Time.deltaTime;
+            float deathPercentage = deathTimer / timeBetweenDeaths;
+            if ( nextDeadStatusLights ) {
+                if (deathPercentage > 0.5f)
+                {
+                    nextDeadStatusLights.SetStatus(2);
+                } else if (deathPercentage > 0f)
+                {
+                    nextDeadStatusLights.SetStatus(1);
+                }
+            }
             if (deathTimer > timeBetweenDeaths)
             {
+                nextDeadStatusLights.SetStatus(3);
                 deathTimer = 0;
                 aliveHumans -= 1;
+                nextDead++;
+                if (nextDead < cryoBeds.Count)
+                {
+                    nextDeadStatusLights = cryoBeds[nextDead].GetComponent<StatusLights>();
+                }
+                else
+                {
+                    nextDeadStatusLights = null;
+                }
+
                 Debug.Log("A hummie died");
             }
         }
@@ -64,7 +102,6 @@ public class Crygenics : SystemBase
             {
                 temperatureText.color = Color.red;
             }
-
         }
         if (alarm)
         {

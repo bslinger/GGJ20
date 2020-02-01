@@ -12,28 +12,36 @@ using TMPro;
 public class Comms : SystemBase
 {
 
-    public GameObject commsUI;
+    [Header("Text Display Settings")]
     public int maxLines = 10;
     public float lineDelay = .1f;
-
     public string startNode = "Start";
 
+    [Header("References")]
+    public GameObject commsUI;
+    public Slider signalStrengthSlider;
+    public TextMeshProUGUI distanceText;
+
+    [Header("Distance Settings")]
+    public float initialDistance = 1000f;
+    public float fullyPoweredStepPerSecond = 1f;
+    public float signalThreshold = .2f;
+    
     private DialogueRunner dialogueRunner;
     private GameObject dialogueCanvas;
     private TextMeshProUGUI textMesh;
-
-    public float initialDistance = 1000f;
     private float distanceLeft;
-    public float fullyPoweredStepPerSecond = 1f;
 
+    [Header("Audio Clips")]
     public AudioClip messageStartAudio;
     public AudioClip messageEndAudio;
     public AudioClip characterAudio;
 
     private float _percentageOfJourney;
+
     public float PercentageOfJourney { get { return _percentageOfJourney; } }
 
-   
+
     [SerializeField] StringEvent stringEvent = null;
 
     List<string> buffer;
@@ -77,9 +85,17 @@ public class Comms : SystemBase
             }
             Decrease();
         }
+
+        signalStrengthSlider.value = currentParameter;
+
         // change distance based on current signal strength
-        distanceLeft -= fullyPoweredStepPerSecond * (currentParameter / maxParameter);
-        _percentageOfJourney = 1 - (distanceLeft / initialDistance);
+        if (currentParameter > signalThreshold)
+        {
+            distanceLeft -= fullyPoweredStepPerSecond * (currentParameter / maxParameter);
+            _percentageOfJourney = 1 - (distanceLeft / initialDistance);
+        }
+
+        distanceText.text = distanceLeft.ToString();
     }
 
     void ChangeToPowered()
