@@ -55,7 +55,7 @@ public class ConnectPoint : MonoBehaviour, PowerSource
         connectedCore = core;
         Transform attachpointOffsetTransform = connectedCore.transform.Find("ConnectAttachPoint");
 
-     
+        Debug.Log($"Core {core.name} connected to {name}");
 
         connectedCore.transform.position = transform.position;
         connectedCore.transform.rotation = transform.rotation;
@@ -70,7 +70,9 @@ public class ConnectPoint : MonoBehaviour, PowerSource
     {
         connectedCore.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         GetComponent<CapsuleCollider>().enabled = true;
+        Debug.Log($"Core {connectedCore.name} disconnected from {name}");
         connectedCore = null;
+       
     }
 
     public bool IsPowered()

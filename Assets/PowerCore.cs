@@ -51,6 +51,7 @@ public class PowerCore : MonoBehaviour
     {
         if (connectedPoint != null)
         {
+            Debug.Log($"Attaching {name} to hand, disconnecting from {connectedPoint.name}");
             connectedPoint.DisconnectCore();
         }
     }
