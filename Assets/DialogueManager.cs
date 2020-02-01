@@ -71,6 +71,16 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(CoreBreakRoutine("SecondCoreBreak"));
     }
 
+    public void ThirdCoreBreak()
+    {
+        StartCoroutine(CoreBreakRoutine("ThirdCoreBreak"));
+    }
+
+    public void FourthCoreBreak()
+    {
+        StartCoroutine(CoreBreakRoutine("FourthCoreBreak"));
+    }
+
     public IEnumerator CoreBreakRoutine(string node)
     {
         PowerCore brokenCore = null;
