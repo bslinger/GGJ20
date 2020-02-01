@@ -21,12 +21,12 @@ public class SlowRotate : SystemBase
         {
             Increase();
         }
-        target.Rotate(rotationAxis * currentParamater);
+        target.Rotate(rotationAxis * currentParameter);
     }
 
     protected override void UpdateUI()
     {
-        float proportionalValue = (maxParamater - currentParamater) / (maxParamater - minParamater);
+        float proportionalValue = (maxParameter - currentParameter) / (maxParameter - minParameter);
         if (slider) {
             slider.value = proportionalValue;
 

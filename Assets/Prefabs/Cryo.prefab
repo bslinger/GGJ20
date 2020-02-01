@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0b8eb040109414299c7c4c83fbc87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramaterName: Temperature
-  startingParamater: -20
-  maxParamater: -20
-  minParamater: -100
+  parameterName: Temperature
+  startingParameter: -20
+  maxParameter: -20
+  minParameter: -100
   step: 1
   powerSourceObject: {fileID: 0}
   isDebug: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
   timeBetweenDeaths: 10
   deadHumansSlider: {fileID: 0}
   aliveHumansSlider: {fileID: 0}
-  temperatureSlider: {fileID: 0}
+  temperatureText: {fileID: 0}
   alarm: {fileID: 0}
 --- !u!82 &1001739304360850270
 AudioSource:

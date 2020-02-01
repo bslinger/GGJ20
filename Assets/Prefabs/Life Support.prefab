@@ -56,10 +56,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa99c6e225398684db464c8c463561d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramaterName: CO2
-  startingParamater: 0
-  maxParamater: 1
-  minParamater: 0
+  parameterName: 
+  startingParameter: 0
+  maxParameter: 0
+  minParameter: 0
   step: 0.01
   powerSourceObject: {fileID: 7056449298540636086}
   isDebug: 0
@@ -119,16 +119,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938b247dc93c1e44ab4d7e88a18884b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramaterName: Oxygen
-  startingParamater: 20.1
-  maxParamater: 30
-  minParamater: 18
+  parameterName: Oxygen
+  startingParameter: 20.1
+  maxParameter: 30
+  minParameter: 15
   step: 0.1
   powerSourceObject: {fileID: 7056449299596359225}
   isDebug: 1
-  cameraBlockers:
-  - {fileID: 0}
-  - {fileID: 0}
+  slider: {fileID: 0}
 --- !u!1 &7056449300183238377
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,10 +173,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ccb92035eb2a42468942e765fff5173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramaterName: Life Support Power
-  startingParamater: 30
-  maxParamater: 100
-  minParamater: 0
+  parameterName: Power
+  startingParameter: 20
+  maxParameter: 40
+  minParameter: 0
   step: 1
   powerSourceObject: {fileID: 0}
   isDebug: 0

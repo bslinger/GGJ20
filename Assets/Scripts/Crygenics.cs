@@ -11,7 +11,7 @@ public class Crygenics : SystemBase
     [SerializeField] float timeBetweenDeaths;
     [SerializeField] Slider deadHumansSlider;
     [SerializeField] Slider aliveHumansSlider;
-    [SerializeField] Slider temperatureSlider;
+    [SerializeField] Text temperatureText;
     [SerializeField] GameObject alarm;
 
     int aliveHumans;
@@ -34,7 +34,7 @@ public class Crygenics : SystemBase
             Decrease();
         }
 
-        if (currentParamater < deathTemperature)
+        if (currentParameter < deathTemperature)
         {
             deathTimer += Time.deltaTime;
             if (deathTimer > timeBetweenDeaths)
@@ -48,10 +48,22 @@ public class Crygenics : SystemBase
 
     protected override void UpdateUI()
     {
-        float proportionalValue = (maxParamater - currentParamater) / (maxParamater - minParamater);
-        if (temperatureSlider)
+        float proportionalValue = (maxParameter - currentParameter) / (maxParameter - minParameter);
+        if (temperatureText)
         {
-            temperatureSlider.value = proportionalValue;
+            temperatureText.text = (int)currentParameter + "C";
+            if (proportionalValue < 0.5f)
+            {
+                temperatureText.color = Color.green;
+            }
+            else if (proportionalValue < 0.75f)
+            {
+                temperatureText.color = Color.yellow;
+            }
+            else
+            {
+                temperatureText.color = Color.red;
+            }
 
         }
         if (alarm)

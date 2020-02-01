@@ -44,15 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bc6a7bd1c0a00419499c5d01526d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramaterName: Lights
-  startingParamater: 0
-  maxParamater: 1
-  minParamater: 0
+  parameterName: Lights
+  startingParameter: 0
+  maxParameter: 1
+  minParameter: 0
   step: 1
   powerSourceObject: {fileID: 0}
   isDebug: 0
   lights:
   - {fileID: 0}
+  lightsOnUI: {fileID: 0}
+  lightsOffUI: {fileID: 0}
 --- !u!82 &4308347272719289659
 AudioSource:
   m_ObjectHideFlags: 0

@@ -16,9 +16,18 @@ public class Comms : SystemBase
     public int maxLines = 10;
     public float lineDelay = .1f;
 
+    public string startNode = "Start";
+
     private DialogueRunner dialogueRunner;
     private GameObject dialogueCanvas;
     private TextMeshProUGUI textMesh;
+
+    public float initialDistance = 1000f;
+    private float distanceLeft;
+    public float fullyPoweredStepPerSecond = 1f;
+
+    private float _percentageOfJourney;
+    public float PercentageOfJourney { get { return _percentageOfJourney; } }
 
    
     [SerializeField] StringEvent stringEvent = null;
@@ -42,6 +51,7 @@ public class Comms : SystemBase
         dialogueRunner = commsUI.GetComponentInChildren<DialogueRunner>();
         dialogueCanvas = commsUI.transform.Find("Dialogue Canvas").gameObject;
         textMesh = dialogueCanvas.GetComponentInChildren<TextMeshProUGUI>();
+        distanceLeft = initialDistance;
     }
 
     protected override void UpdateMe()
@@ -53,6 +63,7 @@ public class Comms : SystemBase
                 powered = true;
                 ChangeToPowered();
             }
+            Increase();
         }
         else
         {
@@ -61,7 +72,11 @@ public class Comms : SystemBase
                 powered = false;
                 ChangeToUnpowered();
             }
+            Decrease();
         }
+        // change distance based on current signal strength
+        distanceLeft -= fullyPoweredStepPerSecond * (currentParameter / maxParameter);
+        _percentageOfJourney = 1 - (distanceLeft / initialDistance);
     }
 
     void ChangeToPowered()
@@ -69,14 +84,9 @@ public class Comms : SystemBase
         dialogueCanvas.SetActive(true);
         if (!hasStarted)
         {
-            dialogueRunner.StartDialogue("Start");
+            dialogueRunner.StartDialogue(startNode);
             hasStarted = true;
         }
-        else
-        {
-            dialogueRunner.StartDialogue("PowerReturn");
-        }
-       
     }
 
     void ChangeToUnpowered()
@@ -86,13 +96,10 @@ public class Comms : SystemBase
         textMesh.text = "";
         dialogueRunner.Stop();
         dialogueCanvas.SetActive(false);
-        
     }
 
     public void EndLine()
     {
-       
-
         buffer.Add(currentLine);
         currentLine = "";
         if (buffer.Count > maxLines)
