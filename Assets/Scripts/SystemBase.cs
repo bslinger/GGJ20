@@ -91,7 +91,10 @@ public abstract class SystemBase : MonoBehaviour
     void CheckPower()
     {
         isPowered = powerSource.IsPowered();
-        audioSource.enabled = isPowered;
+        if (audioSource)
+        {
+            audioSource.enabled = isPowered;
+        }
     }
 
     protected virtual void UpdateMe()
