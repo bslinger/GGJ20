@@ -38,26 +38,36 @@ public class ForcePuller : MonoBehaviour
             if (hit.collider.gameObject.GetComponentInParent<Interactable>() != null)
             {
                 pointingAt = hit.collider.gameObject;
-               
+              // Debug.Log("Pointing at interactable", pointingAt);
             
             }
             else
             {
+               
+                if (pointingAt != null)
+                {
+                    Debug.Log("Clear pointing at");
+                }
                 pointingAt = null;
+                
             }
         }
         else
         {
+            if (pointingAt != null)
+            {
+                Debug.Log("Clear pointing at");
+            }
             pointingAt = null;
         }
     }
 
     public void PullTriggered(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
     {
-        Debug.Log("Trigger pulled");
+        Debug.Log("Trigger pulled", pointingAt);
         if (pointingAt != null)
         {
-            hand.AttachObject(pointingAt.GetComponent<Interactable>().gameObject, GrabTypes.Grip, Hand.AttachmentFlags.VelocityMovement & Hand.AttachmentFlags.SnapOnAttach);
+            hand.AttachObject(pointingAt.GetComponentInParent<Interactable>().gameObject, GrabTypes.Grip);
         }
         
     }
