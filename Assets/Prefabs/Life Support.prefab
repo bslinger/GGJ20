@@ -56,10 +56,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa99c6e225398684db464c8c463561d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramaterName: CO2
-  startingParamater: 0
-  maxParamater: 1
-  minParamater: 0
+  parameterName: 
+  startingParameter: 0
+  maxParameter: 0
+  minParameter: 0
   step: 0.01
   powerSourceObject: {fileID: 7056449298540636086}
   isDebug: 0
@@ -119,14 +119,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938b247dc93c1e44ab4d7e88a18884b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramaterName: Oxygen
-  startingParamater: 20.1
-  maxParamater: 30
-  minParamater: 18
+  parameterName: Oxygen
+  startingParameter: 20.1
+  maxParameter: 30
+  minParameter: 15
   step: 0.1
   powerSourceObject: {fileID: 7056449299596359225}
-  isDebug: 0
-  vingette: {fileID: 0}
+  isDebug: 1
+  slider: {fileID: 0}
 --- !u!1 &7056449300183238377
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7056449300183238379}
   - component: {fileID: 7056449300183238376}
+  - component: {fileID: 4464648039373105724}
   m_Layer: 0
   m_Name: Life Support
   m_TagString: Untagged
@@ -172,10 +173,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ccb92035eb2a42468942e765fff5173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramaterName: Life Support Power
-  startingParamater: 30
-  maxParamater: 100
-  minParamater: 0
+  parameterName: Power
+  startingParameter: 20
+  maxParameter: 40
+  minParameter: 0
   step: 1
   powerSourceObject: {fileID: 0}
   isDebug: 0
@@ -183,3 +184,99 @@ MonoBehaviour:
   carbonDioxideOn: 1
   oxygenOutlet: {fileID: 7056449299596359224}
   carbonDioxideOutlet: {fileID: 7056449298540636081}
+--- !u!82 &4464648039373105724
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056449300183238377}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f6bac9c2dff9f5545bdd96537f6265e9, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

@@ -10,6 +10,10 @@ public class ConnectPoint : MonoBehaviour, PowerSource
     public PowerCore connectedCore;
 
     bool ghostShowing;
+
+    AudioSource audioSource;
+    public AudioClip powerUpAudio;
+    public AudioClip powerDownAudio;
    
 
     // Start is called before the first frame update
@@ -18,7 +22,8 @@ public class ConnectPoint : MonoBehaviour, PowerSource
         if (connectedCore != null)
         {
             connectedCore.ConnectToPoint(this);
-        } 
+        }
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -64,6 +69,16 @@ public class ConnectPoint : MonoBehaviour, PowerSource
         connectedCore.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         GetComponent<CapsuleCollider>().enabled = false;
         ghostCylinderPrefab.SetActive(false);
+
+        if (audioSource == null)
+        {
+            Debug.LogWarning($"No audio source on Connect Point {name}");
+        }
+
+        if (core.powered && audioSource != null)
+        {
+            audioSource.PlayOneShot(powerUpAudio);
+        }
     }
 
     public void DisconnectCore()
@@ -71,6 +86,15 @@ public class ConnectPoint : MonoBehaviour, PowerSource
         connectedCore.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         GetComponent<CapsuleCollider>().enabled = true;
         Debug.Log($"Core {connectedCore.name} disconnected from {name}");
+
+        if (audioSource == null)
+        {
+            Debug.LogWarning($"No audio source on Connect Point {name}");
+        }
+        if (connectedCore.powered && audioSource != null)
+        {
+            audioSource.PlayOneShot(powerDownAudio);
+        }
         connectedCore = null;
     }
 
