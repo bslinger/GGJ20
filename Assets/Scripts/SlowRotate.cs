@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SlowRotate : SystemBase
 {
     [SerializeField] Transform target;
+    [SerializeField] Vector3 rotationAxis;
     [SerializeField] Slider slider;
     [SerializeField] GameObject alarm;
 
@@ -20,7 +21,7 @@ public class SlowRotate : SystemBase
         {
             Increase();
         }
-        target.Rotate(Vector3.forward * currentParamater);
+        target.Rotate(rotationAxis * currentParamater);
     }
 
     protected override void UpdateUI()
