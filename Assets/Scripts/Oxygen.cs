@@ -25,12 +25,12 @@ public class Oxygen : SystemBase
         float value = (startingParameter - currentParameter) / (startingParameter - minParameter);
 
         SteamVR_Fade.Start(Color.black * value, 0);
-        Debug.Log(Color.black * value);
     }
 
     protected override void UpdateUI()
     {
-        float proportionalValue = (maxParameter - currentParameter) / (maxParameter - minParameter);
+        float proportionalValue = (currentParameter - minParameter) / (maxParameter - minParameter);
+        Debug.Log(proportionalValue);
         if (slider)
         {
             slider.value = proportionalValue;
