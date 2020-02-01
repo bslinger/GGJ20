@@ -95,4 +95,13 @@ public class PowerCore : MonoBehaviour
         mats[1] = poweredMaterial;
         meshRenderer.materials = mats;
     }
+
+    public string GetPoweredPoint()
+    {
+        if (connectedPoint == null)
+        {
+            return null;
+        }
+        return connectedPoint.name;
+    }
 }

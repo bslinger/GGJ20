@@ -85,11 +85,6 @@ public class Comms : SystemBase
             dialogueRunner.StartDialogue("Start");
             hasStarted = true;
         }
-        else
-        {
-            dialogueRunner.StartDialogue("PowerReturn");
-        }
-       
     }
 
     void ChangeToUnpowered()

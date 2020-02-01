@@ -28,7 +28,6 @@ public class Oxygen : SystemBase
         //        blocker.localScale = Vector3.one * scale;
         //    }
         SteamVR_Fade.Start(Color.black * value, 0);
-        Debug.Log(Color.black * value);
     }
 }
 
