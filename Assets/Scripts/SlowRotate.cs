@@ -30,14 +30,16 @@ public class SlowRotate : SystemBase
             slider.value = proportionalValue;
 
         }
-        if (proportionalValue <= 0.2f)
+        if (alarm)
         {
-            alarm.SetActive(true);
+            if (proportionalValue <= 0.2f)
+            {
+                alarm.SetActive(true);
+            }
+            else
+            {
+                alarm.SetActive(false);
+            }
         }
-        else
-        {
-            alarm.SetActive(false);
-        }
-
     }
 }
