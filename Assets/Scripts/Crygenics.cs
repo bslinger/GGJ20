@@ -13,6 +13,8 @@ public class Crygenics : SystemBase
     [SerializeField] Slider aliveHumansSlider;
     [SerializeField] Slider temperatureSlider;
     [SerializeField] GameObject alarm;
+    
+    [SerializeField] StatusLightControllers[] statusLightControllers;
 
     int aliveHumans;
     float deathTimer;
@@ -52,17 +54,24 @@ public class Crygenics : SystemBase
         if (temperatureSlider)
         {
             temperatureSlider.value = proportionalValue;
-
         }
         if (alarm)
         {
             if (proportionalValue >= 0.5f)
             {
                 alarm.SetActive(true);
+                foreach( StatusLights statusLightController in statusLightControllers )
+                {
+                    statusLightControllers.SetStatus(1);
+                }
             }
             else
             {
                 alarm.SetActive(false);
+                foreach( StatusLights statusLightController in statusLightControllers )
+                {
+                    statusLightControllers.SetStatus(0);
+                }
             }
         }
         if (deadHumansSlider)
