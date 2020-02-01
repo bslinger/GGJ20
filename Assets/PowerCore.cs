@@ -10,17 +10,27 @@ public class PowerCore : MonoBehaviour
 
     public bool powered;
     public float initialAngularVelocity;
+    public Material unpoweredMaterial;
+    public Material poweredMaterial;
 
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<Rigidbody>().angularVelocity = new Vector3(initialAngularVelocity, initialAngularVelocity);
+        if (powered)
+        {
+            PowerUp();
+        }
+        else
+        {
+            PowerDown();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void SetPointHovering(ConnectPoint point)
@@ -33,7 +43,7 @@ public class PowerCore : MonoBehaviour
 
         connectedPoint = point;
         hoverPoint = null;
-        
+
         connectedPoint.ConnectCore(this);
 
     }
@@ -45,6 +55,7 @@ public class PowerCore : MonoBehaviour
         {
             ConnectToPoint(hoverPoint);
         }
+        PowerUp();
     }
 
     public void OnAttachedToHand()
@@ -55,5 +66,27 @@ public class PowerCore : MonoBehaviour
             connectedPoint.DisconnectCore();
             connectedPoint = null;
         }
+        PowerDown();
+    }
+
+    public void PowerDown()
+    {
+        powered = false;
+        GameObject cylinder = GetComponentInChildren<MeshCollider>().gameObject;
+        MeshRenderer meshRenderer = cylinder.GetComponent<MeshRenderer>();
+
+        Material[] mats = meshRenderer.materials;
+        mats[1] = unpoweredMaterial;
+        meshRenderer.materials = mats;
+    }
+
+    public void PowerUp()
+    {
+        powered = true;
+        GameObject cylinder = GetComponentInChildren<MeshCollider>().gameObject;
+        MeshRenderer meshRenderer = cylinder.GetComponent<MeshRenderer>();
+        Material[] mats = meshRenderer.materials;
+        mats[1] = poweredMaterial;
+        meshRenderer.materials = mats;
     }
 }
