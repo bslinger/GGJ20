@@ -53,6 +53,7 @@ public class PowerCore : MonoBehaviour
         {
             Debug.Log($"Attaching {name} to hand, disconnecting from {connectedPoint.name}");
             connectedPoint.DisconnectCore();
+            connectedPoint = null;
         }
     }
 }

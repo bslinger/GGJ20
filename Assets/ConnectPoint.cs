@@ -72,7 +72,6 @@ public class ConnectPoint : MonoBehaviour, PowerSource
         GetComponent<CapsuleCollider>().enabled = true;
         Debug.Log($"Core {connectedCore.name} disconnected from {name}");
         connectedCore = null;
-       
     }
 
     public bool IsPowered()
