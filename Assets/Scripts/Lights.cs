@@ -50,8 +50,8 @@ public class Lights : SystemBase
         yield return null;
         foreach (GameObject light in lights)
         {
-            yield return new WaitForSeconds(Random.Range(timeBetweenLightsMin, timeBetweenLightsMax));
             StartCoroutine(TurnOn(light));
+            yield return new WaitForSeconds(Random.Range(timeBetweenLightsMin, timeBetweenLightsMax));
         }
     }
 
@@ -60,8 +60,8 @@ public class Lights : SystemBase
         yield return null;
         foreach (GameObject light in lights)
         {
+            StartCoroutine(TurnOff(light));
             yield return new WaitForSeconds(Random.Range(timeBetweenLightsMin, timeBetweenLightsMax));
-            StartCoroutine(TurnOff(light)); ;
         }
     }
 

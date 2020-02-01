@@ -53,15 +53,16 @@ position: -339,-233
 Well, I've contacted mission control
 and we're sending a rescue ship.
 << wait 1>>
-Just hold on as long as you can,
-and make sure those passengers stay alive!
 You've still got enough cores left
 to keep everything online, so just sit tight.
+<< wait 1 >> 
+As long as you keep the signal strength up
+our automated robot ship will come get you!
 ===
 title: FirstCoreBreak
 tags: 
 colorID: 1
-position: -1144,147
+position: -1165,30
 ---
 Wuh oh. Did I just detect that another
 one of your cores has carked it?
@@ -72,4 +73,61 @@ you can use your judgement as to which ones
 are important.
 << wait 1>>
 Hang in there!
+===
+title: Exposition1
+tags: 
+colorID: 2
+position: -1162,247
+---
+OH! I just realized how lonely you must
+be after that journey!
+<< wait 1>>
+You were such a hero to volunteer
+to stay awake and navigate the offworld
+colony ship back home on the long
+30 year trip home!
+<< wait 1>>
+Well rest assured, it was all for
+the good of mankind. And once you
+are safe in the sky city of Melbstralia
+you'll get the welcome you deserve!
+===
+title: FailState-Oxygen
+tags: 
+colorID: 4
+position: -1163,479
+---
+Oh, damn. You didn't keep your life support
+levels high enough, and it looks like
+you've suffocated.
+<<  wait 1>>
+You know... to death.
+You're dead.
+
+At least you saved those colonists
+though!
+===
+title: SecondCoreBreak
+tags: 
+colorID: 0
+position: -122,11
+---
+Hello? Is this thing on?
+<< wait 1 >>
+Yes, ma'am, the pilot can hear you.
+<< wait 1 >>
+Ah, excellent. Hello up there! This is
+grand CEO President Valerie Pickinsworth
+talking to you from your home planet of
+McEarth, the home of Disney!
+
+Now, I've been told that your ship
+is failing fast, but we are close to
+saving you. That almost makes me as
+much of a hero as you!
+<< wait 1>>
+Anyway, keep up the good work of staying
+alive up there, and more importantly,
+keep those fine folks in the back alive!
+They are some of our finest shareholders.
 ===

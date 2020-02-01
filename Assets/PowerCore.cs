@@ -13,6 +13,9 @@ public class PowerCore : MonoBehaviour
     public Material unpoweredMaterial;
     public Material poweredMaterial;
 
+    public GameObject sparkPrefab;
+    public GameObject smokePrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +73,8 @@ public class PowerCore : MonoBehaviour
     public void BurnOut()
     {
         PowerDown();
+        Transform sparkTransform = transform.Find("SparkPoint");
+        Instantiate(sparkPrefab, sparkTransform.position, sparkTransform.rotation);
         // particle systems and sounds
     }
 
