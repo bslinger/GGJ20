@@ -51,3 +51,6 @@ MonoBehaviour:
   powerSourceObject: {fileID: 0}
   isDebug: 0
   target: {fileID: 0}
+  rotationAxis: {x: 1, y: 0, z: 0}
+  slider: {fileID: 0}
+  alarm: {fileID: 0}

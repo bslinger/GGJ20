@@ -29,30 +29,38 @@ public class ConnectPoint : MonoBehaviour, PowerSource
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("PowerCore"))
+        PowerCore core = other.gameObject.GetComponentInParent<PowerCore>();
+        if (core != null)
         {
             // show ghost mode
             Debug.Log("Ghost Mode On");
             ghostCylinderPrefab.SetActive(true);
-            other.gameObject.GetComponent<PowerCore>().SetPointHovering(this);
+           core.SetPointHovering(this);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("PowerCore"))
+        PowerCore core = other.gameObject.GetComponentInParent<PowerCore>();
+        if (core != null)
         {
             Debug.Log("Ghost Mode Off");
             ghostCylinderPrefab.SetActive(false);
-            other.gameObject.GetComponent<PowerCore>().SetPointHovering(null);
+            core.SetPointHovering(null);
         }
     }
 
     public void ConnectCore(PowerCore core)
     {
         connectedCore = core;
+        Transform attachpointOffsetTransform = connectedCore.transform.Find("ConnectAttachPoint");
+
+        Debug.Log($"Core {core.name} connected to {name}");
+
         connectedCore.transform.position = transform.position;
         connectedCore.transform.rotation = transform.rotation;
+        connectedCore.transform.Translate(-attachpointOffsetTransform.localPosition,Space.Self);
+      
         connectedCore.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         GetComponent<CapsuleCollider>().enabled = false;
         ghostCylinderPrefab.SetActive(false);
@@ -62,6 +70,7 @@ public class ConnectPoint : MonoBehaviour, PowerSource
     {
         connectedCore.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         GetComponent<CapsuleCollider>().enabled = true;
+        Debug.Log($"Core {connectedCore.name} disconnected from {name}");
         connectedCore = null;
     }
 

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SlowRotate : SystemBase
 {
     [SerializeField] Transform target;
+    [SerializeField] Vector3 rotationAxis;
     [SerializeField] Slider slider;
     [SerializeField] GameObject alarm;
 
@@ -20,7 +21,7 @@ public class SlowRotate : SystemBase
         {
             Increase();
         }
-        target.Rotate(Vector3.forward * currentParamater);
+        target.Rotate(rotationAxis * currentParamater);
     }
 
     protected override void UpdateUI()
@@ -30,14 +31,16 @@ public class SlowRotate : SystemBase
             slider.value = proportionalValue;
 
         }
-        if (proportionalValue <= 0.2f)
+        if (alarm)
         {
-            alarm.SetActive(true);
+            if (proportionalValue <= 0.2f)
+            {
+                alarm.SetActive(true);
+            }
+            else
+            {
+                alarm.SetActive(false);
+            }
         }
-        else
-        {
-            alarm.SetActive(false);
-        }
-
     }
 }

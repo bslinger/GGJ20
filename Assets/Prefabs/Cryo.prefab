@@ -47,9 +47,13 @@ MonoBehaviour:
   startingParamater: -20
   maxParamater: -20
   minParamater: -100
-  step: 10
+  step: 1
   powerSourceObject: {fileID: 0}
-  isDebug: 0
+  isDebug: 1
   deathTemperature: -80
   startingHumans: 10
-  timeBetweenDeaths: 2
+  timeBetweenDeaths: 10
+  deadHumansSlider: {fileID: 0}
+  aliveHumansSlider: {fileID: 0}
+  temperatureSlider: {fileID: 0}
+  alarm: {fileID: 0}
