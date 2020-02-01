@@ -51,7 +51,7 @@ MonoBehaviour:
   step: 1
   powerSourceObject: {fileID: 0}
   isDebug: 0
-  deathTemperature: -30
+  deathTemperature: -80
   startingHumans: 10
   timeBetweenDeaths: 10
   deadHumansSlider: {fileID: 0}
