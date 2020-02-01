@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using Valve.VR;
+using UnityEngine.UI;
 
 
 
 public class Oxygen : SystemBase
 {
-    [SerializeField] List<Transform> cameraBlockers;
+    [SerializeField] Slider slider;
 
     protected override void UpdateMe()
     {
@@ -22,12 +23,18 @@ public class Oxygen : SystemBase
         }
 
         float value = (startingParameter - currentParameter) / (startingParameter - minParameter);
-        float scale = Mathf.Lerp(0.5f, 0.1f, value);
-        //    foreach (Transform blocker in cameraBlockers)
-        //    {
-        //        blocker.localScale = Vector3.one * scale;
-        //    }
+
         SteamVR_Fade.Start(Color.black * value, 0);
+    }
+
+    protected override void UpdateUI()
+    {
+        float proportionalValue = (maxParameter - currentParameter) / (maxParameter - minParameter);
+        if (slider)
+        {
+            slider.value = proportionalValue;
+
+        }
     }
 }
 

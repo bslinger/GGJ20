@@ -5,6 +5,8 @@ using UnityEngine;
 public class Lights : SystemBase
 {
     [SerializeField] List<GameObject> lights;
+    [SerializeField] GameObject lightsOnUI;
+    [SerializeField] GameObject lightsOffUI;
 
     protected override void UpdateMe()
     {
@@ -25,6 +27,12 @@ public class Lights : SystemBase
                 light.SetActive(false);
             }
         }
+    }
+
+    protected override void UpdateUI()
+    {
+        lightsOnUI.SetActive(isPowered);
+        lightsOffUI.SetActive(!isPowered);
     }
 
 }

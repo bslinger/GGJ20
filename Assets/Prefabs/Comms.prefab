@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ea43a8132ce034f8fa0d17f50cfcf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parameterName: 
+  parameterName: Comms
   startingParameter: 0
   maxParameter: 1
   minParameter: 0
