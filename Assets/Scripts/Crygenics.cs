@@ -34,7 +34,7 @@ public class Crygenics : SystemBase
             Decrease();
         }
 
-        if (currentParamater < deathTemperature)
+        if (currentParameter < deathTemperature)
         {
             deathTimer += Time.deltaTime;
             if (deathTimer > timeBetweenDeaths)
@@ -48,7 +48,7 @@ public class Crygenics : SystemBase
 
     protected override void UpdateUI()
     {
-        float proportionalValue = (maxParamater - currentParamater) / (maxParamater - minParamater);
+        float proportionalValue = (maxParameter - currentParameter) / (maxParameter - minParameter);
         if (temperatureSlider)
         {
             temperatureSlider.value = proportionalValue;

@@ -21,7 +21,7 @@ public class Oxygen : SystemBase
             Decrease();
         }
 
-        float value = (startingParamater - currentParamater) / (startingParamater - minParamater);
+        float value = (startingParameter - currentParameter) / (startingParameter - minParameter);
         float scale = Mathf.Lerp(0.5f, 0.1f, value);
         //    foreach (Transform blocker in cameraBlockers)
         //    {

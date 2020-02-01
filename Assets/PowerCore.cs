@@ -69,6 +69,12 @@ public class PowerCore : MonoBehaviour
         PowerDown();
     }
 
+    public void BurnOut()
+    {
+        PowerDown();
+        // particle systems and sounds
+    }
+
     public void PowerDown()
     {
         powered = false;

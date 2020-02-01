@@ -896,7 +896,7 @@ Transform:
   - {fileID: 419942894}
   - {fileID: 578630735}
   m_Father: {fileID: 1961127324}
-  m_RootOrder: 18
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &224422302 stripped
 Transform:
@@ -2333,12 +2333,12 @@ PrefabInstance:
     - target: {fileID: 2064798746823380205, guid: e56afdf88b8586a40ab901be46e2f57e,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2670170827086492142, guid: e56afdf88b8586a40ab901be46e2f57e,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2972284459316214479, guid: e56afdf88b8586a40ab901be46e2f57e,
         type: 3}
@@ -2363,12 +2363,12 @@ PrefabInstance:
     - target: {fileID: 2972284459490088349, guid: e56afdf88b8586a40ab901be46e2f57e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3021182919927073197, guid: e56afdf88b8586a40ab901be46e2f57e,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4839728378521778539, guid: e56afdf88b8586a40ab901be46e2f57e,
         type: 3}
@@ -5182,18 +5182,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b789bd954f70ea144b095a3a6670703a, type: 3}
---- !u!114 &1525526995 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2972284459316214472, guid: e56afdf88b8586a40ab901be46e2f57e,
-    type: 3}
-  m_PrefabInstance: {fileID: 776849122}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1549034306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7722124541440870900, guid: b789bd954f70ea144b095a3a6670703a,
@@ -6226,7 +6214,7 @@ Transform:
   - {fileID: 52960781}
   - {fileID: 709211426}
   m_Father: {fileID: 1961127324}
-  m_RootOrder: 16
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1911609928
 Mesh:
@@ -7586,11 +7574,6 @@ PrefabInstance:
       propertyPath: powerSourceObject
       value: 
       objectReference: {fileID: 1322291058}
-    - target: {fileID: 8673500482406048934, guid: 13bd2299d3fa0274ca769c92694d139d,
-        type: 3}
-      propertyPath: dialogueRunner
-      value: 
-      objectReference: {fileID: 1525526995}
     - target: {fileID: 8673500482406048934, guid: 13bd2299d3fa0274ca769c92694d139d,
         type: 3}
       propertyPath: commsUI
