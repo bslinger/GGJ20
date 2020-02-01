@@ -44,16 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ea43a8132ce034f8fa0d17f50cfcf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramaterName: Comms
-  startingParamater: 0
-  maxParamater: 1
-  minParamater: 0
-  step: 1
+  parameterName: 
+  startingParameter: 0
+  maxParameter: 1
+  minParameter: 0
+  step: 0.01
   powerSourceObject: {fileID: 0}
   isDebug: 0
   commsUI: {fileID: 0}
   maxLines: 10
   lineDelay: 0.1
+  initialDistance: 1000
+  fullyPoweredStepPerSecond: 1
   stringEvent:
     m_PersistentCalls:
       m_Calls: []

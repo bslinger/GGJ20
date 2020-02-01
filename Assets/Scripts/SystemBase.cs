@@ -4,12 +4,12 @@ using UnityEngine;
 
 public abstract class SystemBase : MonoBehaviour
 {
-    [SerializeField] string paramaterName;
-    [SerializeField] protected float startingParamater;
-    [SerializeField] protected float maxParamater;
-    [SerializeField] protected float minParamater;
+    [SerializeField] string parameterName;
+    [SerializeField] protected float startingParameter;
+    [SerializeField] protected float maxParameter;
+    [SerializeField] protected float minParameter;
     [SerializeField] float step;
-    protected float currentParamater;
+    protected float currentParameter;
     protected bool isPowered;
     [SerializeField] GameObject powerSourceObject;
     PowerSource powerSource;
@@ -27,7 +27,7 @@ public abstract class SystemBase : MonoBehaviour
             gameObject.SetActive(false);
         }
         audioSource = GetComponent<AudioSource>();
-        currentParamater = startingParamater;
+        currentParameter = startingParameter;
         StartMe();
     }
 
@@ -38,8 +38,8 @@ public abstract class SystemBase : MonoBehaviour
 
     public void Increase(float stepProportion)
     {
-        currentParamater += step * Time.deltaTime * stepProportion;
-        currentParamater = Mathf.Clamp(currentParamater, minParamater, maxParamater);
+        currentParameter += step * Time.deltaTime * stepProportion;
+        currentParameter = Mathf.Clamp(currentParameter, minParameter, maxParameter);
     }
 
     public void Increase()
@@ -54,8 +54,8 @@ public abstract class SystemBase : MonoBehaviour
 
     public void Decrease(float stepProportion)
     {
-        currentParamater -= step * Time.deltaTime * stepProportion;
-        currentParamater = Mathf.Clamp(currentParamater, minParamater, maxParamater);
+        currentParameter -= step * Time.deltaTime * stepProportion;
+        currentParameter = Mathf.Clamp(currentParameter, minParameter, maxParameter);
     }
 
     [SerializeField] bool isDebug;
@@ -64,7 +64,7 @@ public abstract class SystemBase : MonoBehaviour
     {
         if (isDebug)
         {
-            GUILayout.Label(paramaterName + " is " + currentParamater);
+            GUILayout.Label(parameterName + " is " + currentParameter);
         }
     }
 
