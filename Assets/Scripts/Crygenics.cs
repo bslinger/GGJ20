@@ -87,6 +87,7 @@ public class Crygenics : SystemBase
     protected override void UpdateUI()
     {
         float proportionalValue = (maxParameter - currentParameter) / (maxParameter - minParameter);
+    //    Debug.Log(proportionalValue);
         if (temperatureText)
         {
             temperatureText.text = (int)currentParameter + "C";
@@ -103,14 +104,16 @@ public class Crygenics : SystemBase
                 temperatureText.color = Color.red;
             }
         }
-        if (alarm)
+        if (alarm != null)
         {
-            if (proportionalValue >= 0.5f)
+            if (proportionalValue >= 0.75f)
             {
+   //             Debug.Log("Turning alam on");
                 alarm.SetActive(true);
             }
             else
             {
+    //            Debug.Log("Turning alam off");
                 alarm.SetActive(false);
             }
         }
