@@ -48,7 +48,7 @@ public class ForcePuller : MonoBehaviour
                     float finalPullForce = pullForce;
                     if (sqrMagnitude < slowDistance)
                     {
-                        finalPullForce -= pullForce / (slowDistance - sqrMagnitude);
+                        //finalPullForce -= pullForce / (slowDistance - sqrMagnitude);
                         Debug.Log($"Final pull force: {finalPullForce}");
                     }
                     if (sqrMagnitude < snapDistance)

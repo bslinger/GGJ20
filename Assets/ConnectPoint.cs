@@ -29,22 +29,24 @@ public class ConnectPoint : MonoBehaviour, PowerSource
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("PowerCore"))
+        PowerCore core = other.gameObject.GetComponentInParent<PowerCore>();
+        if (core != null)
         {
             // show ghost mode
             Debug.Log("Ghost Mode On");
             ghostCylinderPrefab.SetActive(true);
-            other.gameObject.GetComponent<PowerCore>().SetPointHovering(this);
+           core.SetPointHovering(this);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("PowerCore"))
+        PowerCore core = other.gameObject.GetComponentInParent<PowerCore>();
+        if (core != null)
         {
             Debug.Log("Ghost Mode Off");
             ghostCylinderPrefab.SetActive(false);
-            other.gameObject.GetComponent<PowerCore>().SetPointHovering(null);
+            core.SetPointHovering(null);
         }
     }
 
