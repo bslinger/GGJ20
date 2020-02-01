@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using Valve.VR;
+
+
 
 public class Oxygen : SystemBase
 {
-    [SerializeField] Vignette vingette;
+    [SerializeField] List<Transform> cameraBlockers;
 
-    protected override void StartMe() {
-        vingette = GetComponent<PostProcessVolume>().profile.GetSetting<Vignette>();
-        Debug.Log(vingette);
-    }
-
-
-protected override void UpdateMe()
+    protected override void UpdateMe()
     {
         if (isPowered)
         {
@@ -24,11 +21,14 @@ protected override void UpdateMe()
             Decrease();
         }
 
-        if(currentParamater < startingParamater)
-        {
-            float value = (startingParamater - currentParamater) / (startingParamater - minParamater);
-            vingette.intensity.Override(value);
-        }
-
+        float value = (startingParamater - currentParamater) / (startingParamater - minParamater);
+        float scale = Mathf.Lerp(0.5f, 0.1f, value);
+        //    foreach (Transform blocker in cameraBlockers)
+        //    {
+        //        blocker.localScale = Vector3.one * scale;
+        //    }
+        SteamVR_Fade.Start(Color.black * value, 0);
+        Debug.Log(Color.black * value);
     }
 }
+
