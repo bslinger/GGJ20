@@ -16,6 +16,8 @@ public class Comms : SystemBase
     public int maxLines = 10;
     public float lineDelay = .1f;
 
+    public string startNode = "Start";
+
     private DialogueRunner dialogueRunner;
     private GameObject dialogueCanvas;
     private TextMeshProUGUI textMesh;
@@ -82,14 +84,9 @@ public class Comms : SystemBase
         dialogueCanvas.SetActive(true);
         if (!hasStarted)
         {
-            dialogueRunner.StartDialogue("Start");
+            dialogueRunner.StartDialogue(startNode);
             hasStarted = true;
         }
-        else
-        {
-            dialogueRunner.StartDialogue("PowerReturn");
-        }
-       
     }
 
     void ChangeToUnpowered()

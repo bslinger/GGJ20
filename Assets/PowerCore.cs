@@ -55,7 +55,6 @@ public class PowerCore : MonoBehaviour
         {
             ConnectToPoint(hoverPoint);
         }
-        PowerUp();
     }
 
     public void OnAttachedToHand()
@@ -66,7 +65,6 @@ public class PowerCore : MonoBehaviour
             connectedPoint.DisconnectCore();
             connectedPoint = null;
         }
-        PowerDown();
     }
 
     public void BurnOut()
@@ -94,5 +92,14 @@ public class PowerCore : MonoBehaviour
         Material[] mats = meshRenderer.materials;
         mats[1] = poweredMaterial;
         meshRenderer.materials = mats;
+    }
+
+    public string GetPoweredPoint()
+    {
+        if (connectedPoint == null)
+        {
+            return null;
+        }
+        return connectedPoint.name;
     }
 }

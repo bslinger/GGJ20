@@ -1,7 +1,7 @@
 title: Start
 tags: 
 colorID: 0
-position: -480,26
+position: -1157,-240
 ---
 Hey...
 Can you hear me?
@@ -20,7 +20,7 @@ of inbreeding.
 title: Node2
 tags: 
 colorID: 0
-position: -223,28
+position: -900,-238
 ---
 Now listen, I'm getting some pretty 
 odd readings from your ship.
@@ -30,22 +30,46 @@ By our calculations you should still have at least
 does that sound about right?
 [[Node3]] 
 ===
-title: PowerReturn
-tags: 
-colorID: 0
-position: -223,268
----
-Oh hey, we lost you there for a moment
-What was I saying?
-<< continueAfterPowerOutage >> 
-===
 title: Node3
 tags: 
 colorID: 0
-position: 55,29
+position: -622,-237
 ---
 << wait 2.5 >> 
 ...oh. You only have 5 left?
 << wait 1>>
 You're SCREWED my friend.
+<<  wait 2>>
+OK, I guess that was a little harsh.
+I'm just surprised - what did you do,
+eat them for breakfast?
+[[Node4]] 
+===
+title: Node4
+tags: 
+colorID: 0
+position: -339,-233
+---
+Well, I've contacted mission control
+and we're sending a rescue ship.
+<< wait 1>>
+Just hold on as long as you can,
+and make sure those passengers stay alive!
+You've still got enough cores left
+to keep everything online, so just sit tight.
+===
+title: FirstCoreBreak
+tags: 
+colorID: 1
+position: -1144,147
+---
+Wuh oh. Did I just detect that another
+one of your cores has carked it?
+<< wait 1>>
+OK, we're still good. You can switch the cores
+between systems if necessary, and I'm sure
+you can use your judgement as to which ones
+are important.
+<< wait 1>>
+Hang in there!
 ===
