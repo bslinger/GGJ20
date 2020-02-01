@@ -115,6 +115,11 @@ public class Comms : SystemBase
         commsUI.gameObject.GetComponent<AudioSource>().mute = true;
     }
 
+    public void StartLine()
+    {
+        commsUI.gameObject.GetComponent<AudioSource>().PlayOneShot(characterAudio);
+    }
+
     public void EndLine()
     {
         buffer.Add(currentLine);
@@ -136,7 +141,6 @@ public class Comms : SystemBase
         }
         currentLine = line;
         textMesh.text = String.Join("\n", buffer.ToArray()) + "\n" + currentLine;
-        commsUI.gameObject.GetComponent<AudioSource>().PlayOneShot(characterAudio);
 
     }
 
@@ -153,15 +157,26 @@ public class Comms : SystemBase
 
     public void OnDialogueStart()
     {
-        Debug.Log("Dialogue Started");
         textMesh.text = "";
         textMesh.gameObject.SetActive(true);
-        commsUI.gameObject.GetComponent<AudioSource>().PlayOneShot(messageStartAudio);
+        StartCoroutine(CommsSounds());
     }
 
     public void OnDialogueEnd()
     {
         StartCoroutine(this.TurnScreenOffAfterDelay());
+    }
+
+    private IEnumerator CommsSounds()
+    {
+        AudioSource commsAudioSource = commsUI.gameObject.GetComponent<AudioSource>();
+        commsAudioSource.PlayOneShot(messageStartAudio);
+        yield return new WaitUntil(() => !commsAudioSource.isPlaying);
+        while (dialogueRunner.isDialogueRunning)
+        {
+            commsAudioSource.PlayOneShot(characterAudio);
+            yield return new WaitUntil(() => !commsAudioSource.isPlaying);
+        }
     }
 
     private IEnumerator TurnScreenOffAfterDelay(float delay = 3f)

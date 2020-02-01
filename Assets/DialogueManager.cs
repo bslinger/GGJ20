@@ -8,9 +8,8 @@ using System;
 [Serializable]
 public struct NarrativeEvent
 {
-    public float triggerPercentage;
-    //public string eventToFire;
     public UnityEvent eventToFire;
+    public float triggerPercentage;   
     public string nodeToPlay;
     public bool waitForDialogue;
     public bool triggered;

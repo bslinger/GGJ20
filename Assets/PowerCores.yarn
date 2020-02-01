@@ -1,7 +1,7 @@
 title: Start
 tags: 
 colorID: 0
-position: -1157,-240
+position: -1183,-285
 ---
 Hey...
 Can you hear me?
@@ -9,6 +9,7 @@ Can you hear me?
 Thank god you're finally here!
 Those colonists you're hauling 
 are going to save our planet!
+
 As you know, we need to repopulate 
 after the climate disaster and 
 this injection of fresh DNA into 
@@ -20,11 +21,15 @@ of inbreeding.
 title: Node2
 tags: 
 colorID: 0
-position: -900,-238
+position: -973,-285
 ---
+My name's Sam, I'm here in mission control
+and I'm going to help you through this.
+
 Now listen, I'm getting some pretty 
 odd readings from your ship.
 How many power cores do you have left?
+
 By our calculations you should still have at least
 500 of those glowy friends to keep you going,
 does that sound about right?
@@ -33,7 +38,7 @@ does that sound about right?
 title: Node3
 tags: 
 colorID: 0
-position: -622,-237
+position: -763,-285
 ---
 << wait 2.5 >> 
 ...oh. You only have 5 left?
@@ -48,7 +53,7 @@ eat them for breakfast?
 title: Node4
 tags: 
 colorID: 0
-position: -339,-233
+position: -553,-285
 ---
 Well, I've contacted mission control
 and we're sending a rescue ship.
@@ -62,7 +67,7 @@ our automated robot ship will come get you!
 title: FirstCoreBreak
 tags: 
 colorID: 1
-position: -1165,30
+position: -1184,-49
 ---
 Wuh oh. Did I just detect that another
 one of your cores has carked it?
@@ -77,7 +82,7 @@ Hang in there!
 title: Exposition1
 tags: 
 colorID: 2
-position: -1162,247
+position: -1187,188
 ---
 OH! I just realized how lonely you must
 be after that journey!
@@ -95,7 +100,7 @@ you'll get the welcome you deserve!
 title: FailState-Oxygen
 tags: 
 colorID: 4
-position: -1163,479
+position: -1188,403
 ---
 Oh, damn. You didn't keep your life support
 levels high enough, and it looks like
@@ -109,8 +114,8 @@ though!
 ===
 title: SecondCoreBreak
 tags: 
-colorID: 0
-position: -122,11
+colorID: 1
+position: -974,-49
 ---
 Hello? Is this thing on?
 << wait 1 >>
@@ -130,4 +135,42 @@ Anyway, keep up the good work of staying
 alive up there, and more importantly,
 keep those fine folks in the back alive!
 They are some of our finest shareholders.
+===
+title: ThirdCoreBreak
+tags: 
+colorID: 1
+position: -764,-49
+---
+Hi, it's me again, your friendly
+neighbourhood mission control lackey.
+
+I'm really hoping you don't die,
+but considering your third core just
+exploded I figured I would introduce
+myself so your last moments aren't
+completely lonely.
+===
+title: FourthCoreBreak
+tags: 
+colorID: 1
+position: -554,-49
+---
+So, You're Down To A Single Core:
+A guide to accepting your mortal doom.
+
+Haha, sorry, just a bit of dark humour there.
+
+You are pretty donezo though.
+===
+title: CryoDead1
+tags: 
+colorID: 0
+position: -922,197
+---
+TREASON! This is grand CEO President
+Valerie Pickinsworth and you have just
+let a valuable shareholder die!
+
+*muffled voices*
+
 ===
