@@ -56,7 +56,7 @@ public class Crygenics : SystemBase
         }
         if (alarm)
         {
-            if (proportionalValue <= 0.2f)
+            if (proportionalValue >= 0.5f)
             {
                 alarm.SetActive(true);
             }
