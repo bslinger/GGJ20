@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e89d4129-bff6-40e8-878c-04c16a33622b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ20/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ20/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ20/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ20/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ben.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ben.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crygenics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crygenics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Oxygen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Oxygen.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +14,7 @@
     <session id="-1305653464">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.4" value="7" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.opened" value="8" />
@@ -68,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Crygenics.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="282">
@@ -103,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Oxygen.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="546">
@@ -309,12 +305,12 @@
       <workItem from="1580554903766" duration="1657000" />
       <workItem from="1580556726202" duration="1655000" />
       <workItem from="1580558543687" duration="1089000" />
-      <workItem from="1580560395789" duration="210000" />
+      <workItem from="1580560395789" duration="534000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11059000" />
+    <option name="totallyTimeSpent" value="11383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -327,7 +323,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27106228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -445,6 +440,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Oxygen.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="31" column="100" selection-start-line="31" selection-start-column="100" selection-end-line="31" selection-end-column="100" />
+          <folding>
+            <marker date="1580560688554" expanded="false" signature="6:160" ph="..." />
+            <marker date="1580560688554" expanded="true" signature="196:805" ph="{...}" />
+            <marker date="1580560688554" expanded="true" signature="274:563" ph="{...}" />
+            <marker date="1580560688554" expanded="true" signature="303:347" ph="{...}" />
+            <marker date="1580560688554" expanded="true" signature="360:404" ph="{...}" />
+            <marker date="1580560688554" expanded="true" signature="603:803" ph="{...}" />
+            <marker date="1580560688554" expanded="true" signature="730:797" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Crygenics.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -474,22 +485,6 @@
             <marker date="1580560594249" expanded="true" signature="3168:3236" ph="{...}" />
             <marker date="1580560594249" expanded="true" signature="3276:3363" ph="{...}" />
             <marker date="1580560594249" expanded="true" signature="3394:3465" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Oxygen.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="31" column="100" selection-start-line="31" selection-start-column="100" selection-end-line="31" selection-end-column="100" />
-          <folding>
-            <marker date="1580560688554" expanded="false" signature="6:160" ph="..." />
-            <marker date="1580560688554" expanded="true" signature="196:805" ph="{...}" />
-            <marker date="1580560688554" expanded="true" signature="274:563" ph="{...}" />
-            <marker date="1580560688554" expanded="true" signature="303:347" ph="{...}" />
-            <marker date="1580560688554" expanded="true" signature="360:404" ph="{...}" />
-            <marker date="1580560688554" expanded="true" signature="603:803" ph="{...}" />
-            <marker date="1580560688554" expanded="true" signature="730:797" ph="{...}" />
           </folding>
         </state>
       </provider>
