@@ -23,10 +23,10 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 2.55
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b99dea197741a4914ade2c48988a469e, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -127,6 +127,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7170466346163925006, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -182,11 +187,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1082826650061356594, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: -436498983394880741, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: df6de0f3591594851b0065dda93c831d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5751cce865a444c6a96d8d509d4710fe, type: 3}
 --- !u!4 &162529320 stripped
@@ -225,7 +240,7 @@ Transform:
   m_LocalScale: {x: 0.25681573, y: 0.25681573, z: 0.25681573}
   m_Children: []
   m_Father: {fileID: 162529320}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -32.625}
 --- !u!23 &166885296
 MeshRenderer:
@@ -510,7 +525,7 @@ Transform:
   m_LocalScale: {x: 0.25681573, y: 0.25681573, z: 0.25681573}
   m_Children: []
   m_Father: {fileID: 162529320}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 32.625}
 --- !u!23 &1175303071
 MeshRenderer:
