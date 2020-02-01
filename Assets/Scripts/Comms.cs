@@ -26,6 +26,10 @@ public class Comms : SystemBase
     private float distanceLeft;
     public float fullyPoweredStepPerSecond = 1f;
 
+    public AudioClip messageStartAudio;
+    public AudioClip messageEndAudio;
+    public AudioClip characterAudio;
+
     private float _percentageOfJourney;
     public float PercentageOfJourney { get { return _percentageOfJourney; } }
 
@@ -119,7 +123,8 @@ public class Comms : SystemBase
         }
         currentLine = line;
         textMesh.text = String.Join("\n", buffer.ToArray()) + "\n" + currentLine;
-        
+        commsUI.gameObject.GetComponent<AudioSource>().PlayOneShot(characterAudio);
+
     }
 
     private void SwitchedToNode(string lastNode)
@@ -129,8 +134,32 @@ public class Comms : SystemBase
 
     public IEnumerator ContinueDialog()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(lineDelay);
         dialogueRunner.dialogue.Continue();
+    }
+
+    public void OnDialogueStart()
+    {
+        Debug.Log("Dialogue Started");
+        textMesh.gameObject.SetActive(true);
+        commsUI.gameObject.GetComponent<AudioSource>().PlayOneShot(messageStartAudio);
+    }
+
+    public void OnDialogueEnd()
+    {
+        StartCoroutine(this.TurnScreenOffAfterDelay());
+    }
+
+    private IEnumerator TurnScreenOffAfterDelay(float delay = 3f)
+    {
+        // show transmission end screen, play sound
+        yield return new WaitForSeconds(delay);
+        textMesh.gameObject.SetActive(false);
+        commsUI.gameObject.GetComponent<AudioSource>().PlayOneShot(messageEndAudio);
+        Transform transform1 = dialogueCanvas.transform.Find("TransmissionEndPanel");
+        transform1.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        transform1.gameObject.SetActive(false);
     }
 
 }
