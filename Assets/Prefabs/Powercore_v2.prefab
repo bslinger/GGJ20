@@ -202,6 +202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powered: 1
   initialAngularVelocity: 0
+  unpoweredMaterial: {fileID: 2100000, guid: 9ab5128b231d94d41ade50b3c5e9005c, type: 2}
+  poweredMaterial: {fileID: 2100000, guid: d5ed8fb4993894c2d981b2c2832d9062, type: 2}
 --- !u!64 &216079202
 MeshCollider:
   m_ObjectHideFlags: 0
