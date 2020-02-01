@@ -9,7 +9,7 @@ public class PowerCore : MonoBehaviour
     private ConnectPoint connectedPoint;
 
     public bool powered;
-    public float initialAngularVelocity;
+
     public Material unpoweredMaterial;
     public Material poweredMaterial;
 
@@ -18,10 +18,14 @@ public class PowerCore : MonoBehaviour
 
     private Light pointLight;
 
+    [SerializeField] bool startingMomentum = true;
+    [SerializeField] float maxInitialAngularVelocity;
+    [SerializeField] float maxInitialLinearVelocity;
+
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        GetComponent<Rigidbody>().angularVelocity = new Vector3(initialAngularVelocity, initialAngularVelocity);
+
         pointLight = transform.Find("Point Light").gameObject.GetComponent<Light>();
         if (powered)
         {
@@ -30,6 +34,12 @@ public class PowerCore : MonoBehaviour
         else
         {
             PowerDown();
+        }
+        yield return null;
+        if (startingMomentum && connectedPoint == null)
+        {
+            GetComponent<Rigidbody>().angularVelocity = new Vector3(Random.Range(-maxInitialAngularVelocity, maxInitialAngularVelocity), Random.Range(-maxInitialAngularVelocity, maxInitialAngularVelocity), Random.Range(-maxInitialAngularVelocity, maxInitialAngularVelocity));
+            GetComponent<Rigidbody>().velocity = new Vector3(Random.Range(-maxInitialLinearVelocity, maxInitialLinearVelocity), Random.Range(-maxInitialLinearVelocity, maxInitialLinearVelocity), Random.Range(-maxInitialLinearVelocity, maxInitialLinearVelocity));
         }
     }
 
