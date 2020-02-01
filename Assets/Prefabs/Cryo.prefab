@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0b8eb040109414299c7c4c83fbc87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parameterName: 
-  startingParameter: 0
-  maxParameter: 0
-  minParameter: 0
+  parameterName: Temperature
+  startingParameter: -20
+  maxParameter: -20
+  minParameter: -100
   step: 1
   powerSourceObject: {fileID: 0}
   isDebug: 0
