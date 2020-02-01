@@ -13,12 +13,18 @@ public class ForcePuller : MonoBehaviour
 
     public SteamVR_Input_Sources handRef;
 
+    public float slowDistance = 3f;
+
+    public float snapDistance = 2f;
+
     private GameObject pointingAt;
+    private Hand hand;
 
     // Start is called before the first frame update
     void Start()
     {
         //activeAction.AddOnStateDownListener(this.PullTriggered, handRef);
+        hand = GetComponentInParent<Hand>();
     }
 
     // Update is called once per frame
@@ -37,7 +43,24 @@ public class ForcePuller : MonoBehaviour
                 if (activeAction.state)
                 {
                     Vector3 difference = (transform.position - pointingAt.transform.position);
-                    pointingAt.GetComponent<Rigidbody>().AddForce(difference.normalized * pullForce);
+                    float sqrMagnitude = difference.sqrMagnitude;
+                    Debug.Log($"Distance {sqrMagnitude}");
+                    float finalPullForce = pullForce;
+                    if (sqrMagnitude < slowDistance)
+                    {
+                        finalPullForce -= pullForce / (slowDistance - sqrMagnitude);
+                        Debug.Log($"Final pull force: {finalPullForce}");
+                    }
+                    if (sqrMagnitude < snapDistance)
+                    {
+                        hand.AttachObject(pointingAt, GrabTypes.Grip);
+                    }
+                    else
+                    {
+                        pointingAt.GetComponent<Rigidbody>().AddForce(difference.normalized * finalPullForce);
+                    }
+                    
+
                 }
                 
             }
