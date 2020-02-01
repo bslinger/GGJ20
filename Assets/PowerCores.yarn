@@ -30,15 +30,6 @@ By our calculations you should still have at least
 does that sound about right?
 [[Node3]] 
 ===
-title: PowerReturn
-tags: 
-colorID: 0
-position: -903,-4
----
-Oh hey, we lost you there for a moment
-What was I saying?
-<< continueAfterPowerOutage >> 
-===
 title: Node3
 tags: 
 colorID: 0
@@ -69,8 +60,8 @@ to keep everything online, so just sit tight.
 ===
 title: FirstCoreBreak
 tags: 
-colorID: 0
-position: -340,0
+colorID: 1
+position: -1144,147
 ---
 Wuh oh. Did I just detect that another
 one of your cores has carked it?
