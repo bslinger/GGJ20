@@ -53,10 +53,11 @@ position: -339,-233
 Well, I've contacted mission control
 and we're sending a rescue ship.
 << wait 1>>
-Just hold on as long as you can,
-and make sure those passengers stay alive!
 You've still got enough cores left
 to keep everything online, so just sit tight.
+<< wait 1 >> 
+As long as you keep the signal strength up
+our automated robot ship will come get you!
 ===
 title: FirstCoreBreak
 tags: 
@@ -72,4 +73,16 @@ you can use your judgement as to which ones
 are important.
 << wait 1>>
 Hang in there!
+===
+title: Exposition1
+tags: 
+colorID: 0
+position: -792,156
+---
+OH! I just realized how lonely you must
+be after that journey!
+<< wait 1>>
+You were such a hero to volunteer
+to stay awake and navigate the offworld
+colony ship back home 
 ===
