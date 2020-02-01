@@ -56,7 +56,7 @@ MonoBehaviour:
   timeBetweenDeaths: 10
   deadHumansSlider: {fileID: 0}
   aliveHumansSlider: {fileID: 0}
-  temperatureSlider: {fileID: 0}
+  temperatureText: {fileID: 0}
   alarm: {fileID: 0}
 --- !u!82 &1001739304360850270
 AudioSource:
