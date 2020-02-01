@@ -13,6 +13,7 @@ public abstract class SystemBase : MonoBehaviour
     protected bool isPowered;
     [SerializeField] GameObject powerSourceObject;
     PowerSource powerSource;
+    AudioSource audioSource;
 
     private void Start()
     {
@@ -25,6 +26,7 @@ public abstract class SystemBase : MonoBehaviour
             Debug.LogError("Power source has not been assigned for this system. System " + name + " will be disabled.", this);
             gameObject.SetActive(false);
         }
+        audioSource = GetComponent<AudioSource>();
         currentParamater = startingParamater;
         StartMe();
     }
@@ -89,6 +91,7 @@ public abstract class SystemBase : MonoBehaviour
     void CheckPower()
     {
         isPowered = powerSource.IsPowered();
+        audioSource.enabled = isPowered;
     }
 
     protected virtual void UpdateMe()
