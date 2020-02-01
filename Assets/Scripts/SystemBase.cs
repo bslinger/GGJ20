@@ -6,8 +6,8 @@ public abstract class SystemBase : MonoBehaviour
 {
     [SerializeField] string paramaterName;
     [SerializeField] float startingParamater;
-    [SerializeField] float maxParamater;
-    [SerializeField] float minParamater;
+    [SerializeField] protected float maxParamater;
+    [SerializeField] protected float minParamater;
     [SerializeField] float step;
     protected float currentParamater;
     protected bool isPowered;
