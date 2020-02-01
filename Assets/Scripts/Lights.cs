@@ -8,24 +8,56 @@ public class Lights : SystemBase
     [SerializeField] GameObject lightsOnUI;
     [SerializeField] GameObject lightsOffUI;
 
+    Coroutine powerUp;
+    Coroutine powerDown;
+
     protected override void UpdateMe()
     {
         if (isPowered)
         {
             Increase();
-            foreach (GameObject light in lights)
+            if (powerUp == null)
             {
-                light.SetActive(true);
+                powerUp = StartCoroutine(PowerUp());
+            }
+            if (powerDown != null)
+            {
+                StopCoroutine(powerDown);
+                powerDown = null;
             }
         }
         else
         {
-            Decrease();
-            foreach (GameObject light in lights)
+            Increase();
+            if (powerDown == null)
             {
-                
-                light.SetActive(false);
+                powerDown = StartCoroutine(PowerDown());
             }
+            if (powerUp != null)
+            {
+                StopCoroutine(powerUp);
+                powerUp = null;
+            }
+        }
+    }
+
+    IEnumerator PowerUp()
+    {
+        yield return null;
+        foreach (GameObject light in lights)
+        {
+            yield return new WaitForSeconds(Random.Range(1f, 5f));
+            light.SetActive(true);
+        }
+    }
+
+    IEnumerator PowerDown()
+    {
+        yield return null;
+        foreach (GameObject light in lights)
+        {
+            yield return new WaitForSeconds(Random.Range(1f, 5f));
+            light.SetActive(true);
         }
     }
 
