@@ -9,11 +9,12 @@ public class PowerCore : MonoBehaviour
     private ConnectPoint connectedPoint;
 
     public bool powered;
+    public float initialAngularVelocity;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<Rigidbody>().angularVelocity = new Vector3(initialAngularVelocity, initialAngularVelocity);
     }
 
     // Update is called once per frame
