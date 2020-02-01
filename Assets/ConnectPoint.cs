@@ -70,7 +70,12 @@ public class ConnectPoint : MonoBehaviour, PowerSource
         GetComponent<CapsuleCollider>().enabled = false;
         ghostCylinderPrefab.SetActive(false);
 
-        if (core.powered)
+        if (audioSource == null)
+        {
+            Debug.LogWarning($"No audio source on Connect Point {name}");
+        }
+
+        if (core.powered && audioSource != null)
         {
             audioSource.PlayOneShot(powerUpAudio);
         }
@@ -81,7 +86,12 @@ public class ConnectPoint : MonoBehaviour, PowerSource
         connectedCore.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         GetComponent<CapsuleCollider>().enabled = true;
         Debug.Log($"Core {connectedCore.name} disconnected from {name}");
-        if (connectedCore.powered)
+
+        if (audioSource == null)
+        {
+            Debug.LogWarning($"No audio source on Connect Point {name}");
+        }
+        if (connectedCore.powered && audioSource != null)
         {
             audioSource.PlayOneShot(powerDownAudio);
         }
