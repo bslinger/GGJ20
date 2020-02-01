@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class SystemBase : MonoBehaviour
 {
     [SerializeField] string paramaterName;
-    [SerializeField] float startingParamater;
+    [SerializeField] protected float startingParamater;
     [SerializeField] protected float maxParamater;
     [SerializeField] protected float minParamater;
     [SerializeField] float step;

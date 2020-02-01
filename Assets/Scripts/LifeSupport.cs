@@ -29,21 +29,22 @@ public class LifeSupport : SystemBase
 
         oxygenOutlet.PowerUp(false);
         carbonDioxideOutlet.PowerUp(false);
-
-        if (oxygenOn)
+        if (currentParamater > 0)
         {
-            Decrease(0.75f);
-            oxygenOutlet.PowerUp(true);
+            if (oxygenOn)
+            {
+                Decrease(0.75f);
+                oxygenOutlet.PowerUp(true);
+            }
+
+
+            if (carbonDioxideOn)
+            {
+                Decrease(0.5f);
+                carbonDioxideOutlet.PowerUp(true);
+            }
+
         }
-        
-
-        if (carbonDioxideOn)
-        {
-            Decrease(0.5f);
-            carbonDioxideOutlet.PowerUp(true);
-        }
-
-
     }
 }
 
