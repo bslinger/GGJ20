@@ -3781,6 +3781,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 973003364}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &973003368 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2614465142013645237, guid: 2494554e4cdc2ff4bb089aa452af0104,
+    type: 3}
+  m_PrefabInstance: {fileID: 973003364}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1008276146 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4184498430664999955, guid: b789bd954f70ea144b095a3a6670703a,
@@ -5265,7 +5277,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueRunner
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 973003368}
     - target: {fileID: 6927582361449924093, guid: 1969f9f3329c2a94fa22b3d5577f2016,
         type: 3}
       propertyPath: m_Name
