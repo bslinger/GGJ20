@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Crygenics : SystemBase
 {
@@ -8,6 +9,10 @@ public class Crygenics : SystemBase
     [SerializeField] float deathTemperature;
     [SerializeField] int startingHumans;
     [SerializeField] float timeBetweenDeaths;
+    [SerializeField] Slider deadHumansSlider;
+    [SerializeField] Slider aliveHumansSlider;
+    [SerializeField] Slider temperatureSlider;
+    [SerializeField] GameObject alarm;
 
     int aliveHumans;
     float deathTimer;
@@ -38,6 +43,35 @@ public class Crygenics : SystemBase
                 aliveHumans -= 1;
                 Debug.Log("A hummie died");
             }
+        }
+    }
+
+    protected override void UpdateUI()
+    {
+        float proportionalValue = (maxParamater - currentParamater) / (maxParamater - minParamater);
+        if (temperatureSlider)
+        {
+            temperatureSlider.value = proportionalValue;
+
+        }
+        if (alarm)
+        {
+            if (proportionalValue <= 0.2f)
+            {
+                alarm.SetActive(true);
+            }
+            else
+            {
+                alarm.SetActive(false);
+            }
+        }
+        if (deadHumansSlider)
+        {
+            deadHumansSlider.value = startingHumans - aliveHumans;
+        }
+        if (aliveHumansSlider)
+        {
+            aliveHumansSlider.value = aliveHumans;
         }
     }
 }
