@@ -203,7 +203,7 @@ MonoBehaviour:
   variableStorage: {fileID: 2972284459316214478}
   dialogueUI: {fileID: 2972284459316214479}
   startNode: Start
-  startAutomatically: 1
+  startAutomatically: 0
   automaticCommands: 1
   onNodeComplete:
     m_PersistentCalls:
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04317fce65da54f4997a5c4465b4e93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueContainer: {fileID: 0}
+  dialogueContainer: {fileID: 2972284459490088349}
   textSpeed: 0.01
   optionButtons: []
   onDialogueStart:
