@@ -52,7 +52,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510369436209854014}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04317fce65da54f4997a5c4465b4e93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueContainer: {fileID: 2972284459490088349}
+  dialogueContainer: {fileID: 0}
   textSpeed: 0.01
   optionButtons: []
   onDialogueStart:
@@ -326,7 +326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2972284459490088350
 RectTransform:
   m_ObjectHideFlags: 0
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5374917749318244725}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7709378803085271662}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -738,27 +738,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Do somethign with the power cores
-
-    Don''t kill the dooods
-
-    You''re doomed!
-
-    Do somethign with the power cores
-
-    Don''t kill the dooods
-
-    You''re doomed!
-
-    Do somethign with the power cores
-
-    Don''t kill the dooods
-
-    You''re doomed!
-
-    Do somethign with the power cores
-
-    Don''t kill the dooods'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 84991eedb16820d4a9d6f93936b5833f, type: 2}
   m_sharedMaterial: {fileID: 8398734596206882320, guid: 84991eedb16820d4a9d6f93936b5833f,
@@ -828,13 +808,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -279.5551}
   m_textInfo:
     textComponent: {fileID: 8890072141289814373}
-    characterCount: 268
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 45
-    wordCount: 46
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 11
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0

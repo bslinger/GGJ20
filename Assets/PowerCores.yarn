@@ -1,28 +1,51 @@
 title: Start
 tags: 
 colorID: 0
-position: 206,193
+position: -480,26
 ---
-You're doomed!
-Do somethign with the power cores
-Don't kill the dooods
-You're doomed!
-Do somethign with the power cores
-Don't kill the dooods
-You're doomed!
-Do somethign with the power cores
-Don't kill the dooods
-You're doomed!
-asdfbasdgbhadkljghlasdfsdfgkajgkjhasdfkj hasjdfakjsdhf akshd flkjasdfas df
-Do somethign with the power cores
-Don't kill the dooods
-You're doomed!
-Do somethign with the power cores
-Don't kill the dooods
-You're doomed!
-Do somethign with the power cores
-Don't kill the dooods
-You're doomed!
-Do somethign with the power cores
-Don't kill the dooods
+Hey...
+Can you hear me?
+<<wait 2>>
+Thank god you're finally here!
+Those colonists you're hauling 
+are going to save our planet!
+As you know, we need to repopulate 
+after the climate disaster and 
+this injection of fresh DNA into 
+the gene pool will prevent us
+from devolving into a messy sludge 
+of inbreeding. 
+[[Node2]]
+===
+title: Node2
+tags: 
+colorID: 0
+position: -223,28
+---
+Now listen, I'm getting some pretty 
+odd readings from your ship.
+How many power cores do you have left?
+By our calculations you should still have at least
+500 of those glowy friends to keep you going,
+does that sound about right?
+[[Node3]] 
+===
+title: PowerReturn
+tags: 
+colorID: 0
+position: -223,268
+---
+Oh hey, we lost you there for a moment
+What was I saying?
+<< continueAfterPowerOutage >> 
+===
+title: Node3
+tags: 
+colorID: 0
+position: 55,29
+---
+<< wait 2.5 >> 
+...oh. You only have 5 left?
+<< wait 1>>
+You're SCREWED my friend.
 ===
