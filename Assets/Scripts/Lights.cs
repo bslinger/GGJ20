@@ -7,6 +7,9 @@ public class Lights : SystemBase
     [SerializeField] List<GameObject> lights;
     [SerializeField] GameObject lightsOnUI;
     [SerializeField] GameObject lightsOffUI;
+    [SerializeField] float timeBetweenLightsMax = 5;
+    [SerializeField] float timeBetweenLightsMin = 1;
+    [SerializeField] float flickerTime = 0.1f;
 
     Coroutine powerUp;
     Coroutine powerDown;
@@ -16,27 +19,28 @@ public class Lights : SystemBase
         if (isPowered)
         {
             Increase();
+            if (powerDown != null)
+            {
+                StopAllCoroutines();
+                powerDown = null;
+            }
             if (powerUp == null)
             {
                 powerUp = StartCoroutine(PowerUp());
             }
-            if (powerDown != null)
-            {
-                StopCoroutine(powerDown);
-                powerDown = null;
-            }
+
         }
         else
         {
             Increase();
+            if (powerUp != null)
+            {
+                StopAllCoroutines();
+                powerUp = null;
+            }
             if (powerDown == null)
             {
                 powerDown = StartCoroutine(PowerDown());
-            }
-            if (powerUp != null)
-            {
-                StopCoroutine(powerUp);
-                powerUp = null;
             }
         }
     }
@@ -46,8 +50,8 @@ public class Lights : SystemBase
         yield return null;
         foreach (GameObject light in lights)
         {
-            yield return new WaitForSeconds(Random.Range(1f, 5f));
-            light.SetActive(true);
+            yield return new WaitForSeconds(Random.Range(timeBetweenLightsMin, timeBetweenLightsMax));
+            StartCoroutine(TurnOn(light));
         }
     }
 
@@ -56,8 +60,36 @@ public class Lights : SystemBase
         yield return null;
         foreach (GameObject light in lights)
         {
-            yield return new WaitForSeconds(Random.Range(1f, 5f));
+            yield return new WaitForSeconds(Random.Range(timeBetweenLightsMin, timeBetweenLightsMax));
+            StartCoroutine(TurnOff(light)); ;
+        }
+    }
+
+    IEnumerator TurnOn(GameObject light)
+    {
+        yield return null;
+        if (light.activeSelf) yield break;
+        int cycles = Random.Range(1, 10);
+        for (int i = 0; i< cycles; i++)
+        {
+            light.SetActive(false);
+            yield return new WaitForSeconds(Random.Range(0, flickerTime));
             light.SetActive(true);
+            yield return new WaitForSeconds(Random.Range(0, flickerTime));
+        }
+    }
+
+    IEnumerator TurnOff (GameObject light)
+    {
+        yield return null;
+        if (!light.activeSelf) yield break;
+        int cycles = Random.Range(1, 10);
+        for (int i = 0; i < cycles; i++)
+        {
+            light.SetActive(true);
+            yield return new WaitForSeconds(Random.Range(0, flickerTime));
+            light.SetActive(false);
+            yield return new WaitForSeconds(Random.Range(0, flickerTime));
         }
     }
 

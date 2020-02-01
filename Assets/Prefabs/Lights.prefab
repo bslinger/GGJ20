@@ -55,6 +55,9 @@ MonoBehaviour:
   - {fileID: 0}
   lightsOnUI: {fileID: 0}
   lightsOffUI: {fileID: 0}
+  timeBetweenLightsMax: 5
+  timeBetweenLightsMin: 1
+  flickerTime: 0.1
 --- !u!82 &4308347272719289659
 AudioSource:
   m_ObjectHideFlags: 0
@@ -65,7 +68,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 13993b0024d30aa4c96f818cbf63b67f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5d6aaa1b007adce439d848af66fd57d6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
