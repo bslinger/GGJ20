@@ -2020,7 +2020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!1 &594463840 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8959749147765862760, guid: 068f22cd69bd86a46b186e4c578792d0,
+  m_CorrespondingSourceObject: {fileID: 94276799, guid: 068f22cd69bd86a46b186e4c578792d0,
     type: 3}
   m_PrefabInstance: {fileID: 594463838}
   m_PrefabAsset: {fileID: 0}
