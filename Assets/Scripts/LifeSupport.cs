@@ -7,6 +7,8 @@ public class LifeSupport : SystemBase
     public bool oxygenOn;
     public bool carbonDioxideOn;
 
+    public DialogueManager dialogueManager;
+
     [SerializeField] PowerComponent oxygenOutlet;
     [SerializeField] PowerComponent carbonDioxideOutlet;
 
@@ -45,6 +47,16 @@ public class LifeSupport : SystemBase
             }
 
         }
+
+        if (currentParameter <= 0 && !dialogueManager.hasFailed)
+        {
+            //OnFail();
+        }
+    }
+
+    void OnFail()
+    {
+        dialogueManager.FailWithNode("FailState-Oxygen");
     }
 }
 
