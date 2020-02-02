@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class Oxygen : SystemBase
 {
     [SerializeField] Slider slider;
+    [SerializeField] GameObject alarm;
 
     protected override void UpdateMe()
     {
@@ -24,7 +25,7 @@ public class Oxygen : SystemBase
 
         float value = (startingParameter - currentParameter) / (startingParameter - minParameter);
 
-        SteamVR_Fade.Start(Color.black * value, 0);
+        
     }
 
     protected override void UpdateUI()
@@ -34,6 +35,22 @@ public class Oxygen : SystemBase
         {
             slider.value = proportionalValue;
 
+        }
+
+        SteamVR_Fade.Start(Color.black * proportionalValue, 0);
+
+        if (alarm != null)
+        {
+            if (proportionalValue <= 0.2f)
+            {
+                //             Debug.Log("Turning alam on");
+                alarm.SetActive(true);
+            }
+            else
+            {
+                //            Debug.Log("Turning alam off");
+                alarm.SetActive(false);
+            }
         }
     }
 }
