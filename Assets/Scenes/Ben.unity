@@ -6439,6 +6439,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7405962687923773999, guid: 597561c2814e33b41a10d301719a2021,
         type: 3}
+      propertyPath: OnDeadDude.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405962687923773999, guid: 597561c2814e33b41a10d301719a2021,
+        type: 3}
       propertyPath: powerSourceObject
       value: 
       objectReference: {fileID: 1675112692}
@@ -6492,6 +6497,31 @@ PrefabInstance:
       propertyPath: cryoBeds.Array.data[5]
       value: 
       objectReference: {fileID: 1611537086}
+    - target: {fileID: 7405962687923773999, guid: 597561c2814e33b41a10d301719a2021,
+        type: 3}
+      propertyPath: OnDeadDude.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405962687923773999, guid: 597561c2814e33b41a10d301719a2021,
+        type: 3}
+      propertyPath: OnDeadDude.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405962687923773999, guid: 597561c2814e33b41a10d301719a2021,
+        type: 3}
+      propertyPath: OnDeadDude.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 25028766}
+    - target: {fileID: 7405962687923773999, guid: 597561c2814e33b41a10d301719a2021,
+        type: 3}
+      propertyPath: OnDeadDude.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnColonistDie
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405962687923773999, guid: 597561c2814e33b41a10d301719a2021,
+        type: 3}
+      propertyPath: OnDeadDude.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 597561c2814e33b41a10d301719a2021, type: 3}
 --- !u!114 &1420168642 stripped
@@ -10246,10 +10276,5 @@ PrefabInstance:
       propertyPath: offText
       value: 
       objectReference: {fileID: 929769021}
-    - target: {fileID: 8673500482406048934, guid: 13bd2299d3fa0274ca769c92694d139d,
-        type: 3}
-      propertyPath: startNode
-      value: Start
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13bd2299d3fa0274ca769c92694d139d, type: 3}

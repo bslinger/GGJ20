@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Yarn.Unity;
 using System;
+using Valve.VR;
 
 [Serializable]
 public struct NarrativeEvent
@@ -90,7 +91,13 @@ public class DialogueManager : MonoBehaviour
     internal IEnumerator TriggerWinState()
     {
         hasWon = true;
-        dialogueRunner.StartDialogue("WinState-ColonistsRemain");
+        if (cryo.GetAliveCryoBeds().Count == 6)
+        {
+            dialogueRunner.StartDialogue("WinState-AllColonistsRemain");
+        }
+        {
+            dialogueRunner.StartDialogue("WinState-SomeColonistsRemain");
+        }
         yield return new WaitForSeconds(3f);
         foreach (GameObject cryo in cryo.GetAliveCryoBeds())
         {
@@ -99,6 +106,25 @@ public class DialogueManager : MonoBehaviour
         }
         Instantiate(teleportParticlePrefab, playerTransform.position, Quaternion.identity, playerTransform);
 
+    }
+
+    public void OnColonistDie()
+    {
+        if (cryo.GetAliveCryoBeds().Count == 0)
+        {
+            StartCoroutine(AllColonistsDeadRoutine());
+        }
+    }
+
+    public IEnumerator AllColonistsDeadRoutine()
+    {
+        dialogueRunner.StartDialogue("FailState-AllColonistsDead");
+        yield return new WaitWhile(() => {
+            return dialogueRunner.isDialogueRunning;
+            });
+
+        Debug.Log("Fading to black");
+        SteamVR_Fade.Start(Color.black, 4f);
     }
 
     public IEnumerator CoreBreakRoutine(string node)
