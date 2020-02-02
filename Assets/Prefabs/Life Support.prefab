@@ -127,6 +127,10 @@ MonoBehaviour:
   powerSourceObject: {fileID: 7056449299596359225}
   isDebug: 1
   slider: {fileID: 0}
+  alarm: {fileID: 0}
+  startFadeLevel: 18
+  fadeTime: 3
+  dialogueManager: {fileID: 0}
 --- !u!1 &7056449300183238377
 GameObject:
   m_ObjectHideFlags: 0
