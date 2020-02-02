@@ -193,7 +193,7 @@ public class Comms : SystemBase
         }
     }
 
-    private IEnumerator TurnScreenOffAfterDelay(float delay = 3f)
+    private IEnumerator TurnScreenOffAfterDelay(float delay = 5f)
     {
         // show transmission end screen, play sound
         yield return new WaitForSeconds(delay);
