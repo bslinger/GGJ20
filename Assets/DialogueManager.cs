@@ -56,7 +56,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     ev.eventToFire.Invoke();
                 }
-                if (ev.nodeToPlay != null)
+                if (ev.nodeToPlay != null && ev.nodeToPlay != "")
                 {
                     dialogueRunner.StartDialogue(ev.nodeToPlay);
                 }
