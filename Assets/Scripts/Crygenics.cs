@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Crygenics : SystemBase
@@ -15,6 +16,7 @@ public class Crygenics : SystemBase
     [SerializeField] GameObject alarm;
     
     [SerializeField] List<GameObject> cryoBeds;
+    [SerializeField] UnityEvent OnDeadDude;
     
     private int nextDead = 0;
     private StatusLights nextDeadStatusLights;
@@ -66,17 +68,28 @@ public class Crygenics : SystemBase
             }
             if (deathTimer > timeBetweenDeaths)
             {
-                nextDeadStatusLights.SetStatus(3);
+                if (nextDeadStatusLights != null)
+                {
+                    nextDeadStatusLights.SetStatus(3);
+                }
+               
                 deathTimer = 0;
                 aliveHumans -= 1;
                 nextDead++;
                 if (nextDead < cryoBeds.Count)
                 {
                     nextDeadStatusLights = cryoBeds[nextDead].GetComponent<StatusLights>();
+                    OnDeadDude.Invoke();
+                }
+                else if (nextDead == cryoBeds.Count)
+                {
+                    // last one just died
+                    OnDeadDude.Invoke();
+                    nextDeadStatusLights = null;
                 }
                 else
                 {
-                    nextDeadStatusLights = null;
+                    
                 }
 
                 //Debug.Log("A hummie died");

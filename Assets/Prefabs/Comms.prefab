@@ -52,7 +52,7 @@ MonoBehaviour:
   powerSourceObject: {fileID: 0}
   isDebug: 0
   maxLines: 10
-  lineDelay: 0.2
+  lineDelay: 0
   startNode: Start
   commsUI: {fileID: 0}
   signalStrengthSlider: {fileID: 0}
