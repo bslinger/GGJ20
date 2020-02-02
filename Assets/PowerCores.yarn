@@ -6,10 +6,11 @@ position: -1183,-285
 Hey...
 Can you hear me?
 <<wait 2>>
+<< break >> 
 Thank god you're finally here!
 Those colonists you're hauling 
 are going to save our planet!
-
+<< break >> 
 As you know, we need to repopulate 
 after the climate disaster and 
 this injection of fresh DNA into 
@@ -25,11 +26,11 @@ position: -973,-285
 ---
 My name's Sam, I'm here in mission control
 and I'm going to help you through this.
-
+<< break >> 
 Now listen, I'm getting some pretty 
 odd readings from your ship.
 How many power cores do you have left?
-
+<< break >> 
 By our calculations you should still have at least
 500 of those glowy friends to keep you going,
 does that sound about right?
@@ -43,7 +44,9 @@ position: -763,-285
 << wait 2.5 >> 
 ...oh. You only have 5 left?
 << wait 1>>
+<< break >> 
 You're SCREWED my friend.
+<< break >> 
 <<  wait 2>>
 OK, I guess that was a little harsh.
 I'm just surprised - what did you do,
@@ -58,9 +61,11 @@ position: -553,-285
 Well, I've contacted mission control
 and we're sending a rescue ship.
 << wait 1>>
+<< break >> 
 You've still got enough cores left
 to keep everything online, so just sit tight.
 << wait 1 >> 
+<< break >> 
 As long as you keep the signal strength up
 our automated robot ship will come get you!
 ===
@@ -72,11 +77,13 @@ position: -1184,-49
 Wuh oh. Did I just detect that another
 one of your cores has carked it?
 << wait 1>>
+<< break >> 
 OK, we're still good. You can switch the cores
 between systems if necessary, and I'm sure
 you can use your judgement as to which ones
 are important.
 << wait 1>>
+<< break >> 
 Hang in there!
 ===
 title: Exposition1
@@ -87,10 +94,12 @@ position: -1187,188
 OH! I just realized how lonely you must
 be after that journey!
 << wait 1>>
+<< break >> 
 A 30 year cargo haul must be difficult,
 even with the huge payout our governcorp has 
 promised you on delivery.
 << wait 1>>
+<< break >> 
 Well rest assured, it was all for
 the good of mankind. And once you
 are safe in the sky city of Melbstralia
@@ -105,31 +114,35 @@ Oh, damn. You didn't keep your life support
 levels high enough, and it looks like
 you've suffocated.
 <<  wait 1>>
+<< break >> 
 You know... to death.
 You're dead.
-
+<< break >> 
 At least you saved those colonists
 though!
 ===
 title: SecondCoreBreak
 tags: 
 colorID: 1
-position: -974,-49
+position: -976,-49
 ---
 Hello? Is this thing on?
 << wait 1 >>
+<< break >> 
 Yes, ma'am, the pilot can hear you.
+<< break >> 
 << wait 1 >>
 Ah, excellent. Hello up there! This is
 grand CEO President Valerie Pickinsworth
 talking to you from your home planet of
 McEarth, the home of Disney!
-
+<< break >> 
 Now, I've been told that your ship
 is failing fast, but we are close to
 saving you. That almost makes me as
 much of a hero as you!
 << wait 1>>
+<< break >> 
 Anyway, keep up the good work of staying
 alive up there, and more importantly,
 keep those fine folks in the back alive!
@@ -142,7 +155,7 @@ position: -764,-49
 ---
 Hi, it's me again, your friendly
 neighbourhood mission control lackey.
-
+<< break >> 
 I'm really hoping you don't die,
 but considering your third core just
 exploded I figured I would introduce
@@ -156,9 +169,9 @@ position: -554,-49
 ---
 So, You're Down To A Single Core:
 A guide to accepting your mortal doom.
-
+<< break >> 
 Haha, sorry, just a bit of dark humour there.
-
+<< break >> 
 You are pretty donezo though.
 ===
 title: CryoDead1
@@ -169,9 +182,8 @@ position: -922,197
 TREASON! This is grand CEO President
 Valerie Pickinsworth and you have just
 let a valuable shareholder die!
-
+<< break >> 
 *muffled voices*
-
 ===
 title: WinState-AllColonistsRemain
 tags: 
@@ -192,6 +204,7 @@ Well, we're here! Since you've literally murdered
 some of our valuable shareholders, you will
 not be receiving the full amount as discussed.
 << wait 1>>
+<< break >> 
 Given your partial success however, we are choosing not to
 try you for treason.
 [[WinState]] 
@@ -208,16 +221,18 @@ down for a quick shower, and then you can
 start on the 30 year journey back home to
 spend it!
 << wait 1>>
+<< break >> 
 We are unfortunately short on power cores
 but you've done so well I'm sure you can
 make that one last.
 << wait 1>>
+<< break >> 
 BYYYYEEEE
 ===
 title: FailState-AllColonistsDead
 tags: 
 colorID: 0
-position: -190,184
+position: -190,182
 ---
 Wow, you really f-bombed that up.
 << wait 1>>
@@ -227,7 +242,9 @@ SELF DESTRUCT IN
 << wait 1>>
 2
 << wait 1>>
+<< break >> 
 Haha, just kidding. We're not monsters.
 << wait 5 >>
+<< break >> 
 ...1
 ===

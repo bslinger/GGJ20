@@ -159,6 +159,11 @@ public class Comms : SystemBase
 
     private void SwitchedToNode(string lastNode)
     {
+        AddLineBreak();
+    }
+
+    public void AddLineBreak()
+    {
         buffer.Add("");
     }
 
