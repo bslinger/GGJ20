@@ -99,7 +99,7 @@ public class Comms : SystemBase
             _percentageOfJourney = 1 - (distanceLeft / initialDistance);
         }
 
-        distanceText.text = distanceLeft.ToString();
+        distanceText.text = ((int)distanceLeft).ToString();
     }
 
     void ChangeToPowered()
