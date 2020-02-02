@@ -79,7 +79,7 @@ public class Crygenics : SystemBase
                     nextDeadStatusLights = null;
                 }
 
-                Debug.Log("A hummie died");
+                //Debug.Log("A hummie died");
             }
         }
     }
@@ -87,15 +87,20 @@ public class Crygenics : SystemBase
     protected override void UpdateUI()
     {
         float proportionalValue = (maxParameter - currentParameter) / (maxParameter - minParameter);
-    //    Debug.Log(proportionalValue);
+
+      //  int displayValue = (int)Mathf.Lerp(lowerDisplayTemp, upperDisplayTemp, proportionalValue);
+
+        float deathValue = (maxParameter - deathTemperature) / (maxParameter - minParameter);
+
+        //    Debug.Log(proportionalValue);
         if (temperatureText)
         {
-            temperatureText.text = (int)currentParameter + "C";
-            if (proportionalValue < 0.5f)
+            temperatureText.text = (int)(-currentParameter) + "K";
+            if (proportionalValue < deathValue * 0.75f)
             {
                 temperatureText.color = Color.green;
             }
-            else if (proportionalValue < 0.75f)
+            else if (proportionalValue < deathValue)
             {
                 temperatureText.color = Color.yellow;
             }
@@ -106,7 +111,7 @@ public class Crygenics : SystemBase
         }
         if (alarm != null)
         {
-            if (proportionalValue >= 0.75f)
+            if (proportionalValue >= 0.865f)
             {
    //             Debug.Log("Turning alam on");
                 alarm.SetActive(true);
@@ -125,5 +130,15 @@ public class Crygenics : SystemBase
         {
             aliveHumansSlider.value = aliveHumans;
         }
+    }
+
+    public List<GameObject> GetAliveCryoBeds()
+    {
+        List<GameObject> alive = new List<GameObject>();
+        for (int i = nextDead; i< cryoBeds.Count; i++)
+        {
+            alive.Add(cryoBeds[i]);
+        }
+        return alive;
     }
 }

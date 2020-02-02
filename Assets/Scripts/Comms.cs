@@ -21,6 +21,7 @@ public class Comms : SystemBase
     public GameObject commsUI;
     public Slider signalStrengthSlider;
     public TextMeshProUGUI distanceText;
+    public DialogueManager dialogueManager;
 
     [Header("Distance Settings")]
     public float initialDistance = 1000f;
@@ -28,6 +29,7 @@ public class Comms : SystemBase
     public float signalThreshold = .2f;
     
     private DialogueRunner dialogueRunner;
+   
     private GameObject dialogueCanvas;
     private TextMeshProUGUI textMesh;
     private float distanceLeft;
@@ -36,6 +38,10 @@ public class Comms : SystemBase
     public AudioClip messageStartAudio;
     public AudioClip messageEndAudio;
     public AudioClip characterAudio;
+
+    [Header("Console UI")]
+    [SerializeField] GameObject onText;
+    [SerializeField] GameObject offText;
 
     private float _percentageOfJourney;
 
@@ -67,6 +73,12 @@ public class Comms : SystemBase
 
     protected override void UpdateMe()
     {
+
+        if(PercentageOfJourney >= 1 && !dialogueManager.hasWon && !dialogueManager.hasFailed)
+        {
+            StartCoroutine(dialogueManager.TriggerWinState());
+        }
+
         if (isPowered)
         {
           if (!powered)
@@ -92,15 +104,15 @@ public class Comms : SystemBase
         if (currentParameter > signalThreshold)
         {
             distanceLeft -= fullyPoweredStepPerSecond * (currentParameter / maxParameter);
+            distanceLeft = Mathf.Clamp(distanceLeft, 0, initialDistance);
             _percentageOfJourney = 1 - (distanceLeft / initialDistance);
         }
 
-        distanceText.text = distanceLeft.ToString();
+        distanceText.text = ((int)distanceLeft).ToString();
     }
 
     void ChangeToPowered()
     {
-        dialogueCanvas.SetActive(true);
         if (!hasStarted)
         {
             dialogueRunner.StartDialogue(startNode);
@@ -113,11 +125,12 @@ public class Comms : SystemBase
     void ChangeToUnpowered()
     {
         // save the node we were on so we can start it back up next time
-        lastNode = dialogueRunner.dialogue.currentNode;
-        textMesh.text = "";
-        dialogueRunner.Stop();
-        dialogueCanvas.SetActive(false);
         commsUI.gameObject.GetComponent<AudioSource>().mute = true;
+    }
+
+    public void StartLine()
+    {
+        commsUI.gameObject.GetComponent<AudioSource>().PlayOneShot(characterAudio);
     }
 
     public void EndLine()
@@ -141,7 +154,6 @@ public class Comms : SystemBase
         }
         currentLine = line;
         textMesh.text = String.Join("\n", buffer.ToArray()) + "\n" + currentLine;
-        commsUI.gameObject.GetComponent<AudioSource>().PlayOneShot(characterAudio);
 
     }
 
@@ -158,10 +170,10 @@ public class Comms : SystemBase
 
     public void OnDialogueStart()
     {
-        Debug.Log("Dialogue Started");
         textMesh.text = "";
+        buffer.Clear();
         textMesh.gameObject.SetActive(true);
-        commsUI.gameObject.GetComponent<AudioSource>().PlayOneShot(messageStartAudio);
+        StartCoroutine(CommsSounds());
     }
 
     public void OnDialogueEnd()
@@ -169,10 +181,26 @@ public class Comms : SystemBase
         StartCoroutine(this.TurnScreenOffAfterDelay());
     }
 
-    private IEnumerator TurnScreenOffAfterDelay(float delay = 3f)
+    private IEnumerator CommsSounds()
+    {
+        AudioSource commsAudioSource = commsUI.gameObject.GetComponent<AudioSource>();
+        commsAudioSource.PlayOneShot(messageStartAudio);
+        yield return new WaitUntil(() => !commsAudioSource.isPlaying);
+        while (dialogueRunner.isDialogueRunning)
+        {
+            commsAudioSource.PlayOneShot(characterAudio);
+            yield return new WaitUntil(() => !commsAudioSource.isPlaying);
+        }
+    }
+
+    private IEnumerator TurnScreenOffAfterDelay(float delay = 5f)
     {
         // show transmission end screen, play sound
         yield return new WaitForSeconds(delay);
+        if (dialogueRunner.isDialogueRunning)
+        {
+            yield break;
+        }
         textMesh.gameObject.SetActive(false);
         textMesh.text = "";
         buffer.Clear();
@@ -184,4 +212,10 @@ public class Comms : SystemBase
         transform1.gameObject.SetActive(false);
     }
 
+    protected override void UpdateUI()
+    {
+            onText.SetActive(isPowered);
+            offText.SetActive(!isPowered);
+
+    }
 }

@@ -9,17 +9,24 @@ public class PowerCore : MonoBehaviour
     private ConnectPoint connectedPoint;
 
     public bool powered;
-    public float initialAngularVelocity;
+
     public Material unpoweredMaterial;
     public Material poweredMaterial;
 
     public GameObject sparkPrefab;
     public GameObject smokePrefab;
 
+    private Light pointLight;
+
+    [SerializeField] bool startingMomentum = true;
+    [SerializeField] float maxInitialAngularVelocity;
+    [SerializeField] float maxInitialLinearVelocity;
+
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        GetComponent<Rigidbody>().angularVelocity = new Vector3(initialAngularVelocity, initialAngularVelocity);
+
+        pointLight = transform.Find("Point Light").gameObject.GetComponent<Light>();
         if (powered)
         {
             PowerUp();
@@ -27,6 +34,13 @@ public class PowerCore : MonoBehaviour
         else
         {
             PowerDown();
+            BurnOut(false);
+        }
+        yield return null;
+        if (startingMomentum && connectedPoint == null)
+        {
+            GetComponent<Rigidbody>().angularVelocity = new Vector3(Random.Range(-maxInitialAngularVelocity, maxInitialAngularVelocity), Random.Range(-maxInitialAngularVelocity, maxInitialAngularVelocity), Random.Range(-maxInitialAngularVelocity, maxInitialAngularVelocity));
+            GetComponent<Rigidbody>().velocity = new Vector3(Random.Range(-maxInitialLinearVelocity, maxInitialLinearVelocity), Random.Range(-maxInitialLinearVelocity, maxInitialLinearVelocity), Random.Range(-maxInitialLinearVelocity, maxInitialLinearVelocity));
         }
     }
 
@@ -70,11 +84,15 @@ public class PowerCore : MonoBehaviour
         }
     }
 
-    public void BurnOut()
+    public void BurnOut(bool withSpark = true)
     {
         PowerDown();
         Transform sparkTransform = transform.Find("SparkPoint");
-        Instantiate(sparkPrefab, sparkTransform.position, sparkTransform.rotation);
+        if (withSpark)
+        {
+            Instantiate(sparkPrefab, sparkTransform.position, sparkTransform.rotation, transform);
+        }
+        Instantiate(smokePrefab, sparkTransform.position, sparkTransform.rotation, transform);
         // particle systems and sounds
     }
 
@@ -87,6 +105,7 @@ public class PowerCore : MonoBehaviour
         Material[] mats = meshRenderer.materials;
         mats[1] = unpoweredMaterial;
         meshRenderer.materials = mats;
+        pointLight.gameObject.SetActive(false);
     }
 
     public void PowerUp()
@@ -97,6 +116,8 @@ public class PowerCore : MonoBehaviour
         Material[] mats = meshRenderer.materials;
         mats[1] = poweredMaterial;
         meshRenderer.materials = mats;
+        pointLight.gameObject.SetActive(true);
+
     }
 
     public string GetPoweredPoint()

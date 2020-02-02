@@ -45,13 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterName: Temperature
-  startingParameter: -20
-  maxParameter: -20
-  minParameter: -100
-  step: 1
+  startingParameter: -100
+  maxParameter: -100
+  minParameter: -300
+  step: 3
   powerSourceObject: {fileID: 0}
   isDebug: 0
-  deathTemperature: -80
+  deathTemperature: -273
   startingHumans: 10
   timeBetweenDeaths: 10
   deadHumansSlider: {fileID: 0}
