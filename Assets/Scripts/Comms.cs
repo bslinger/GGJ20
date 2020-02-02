@@ -197,6 +197,10 @@ public class Comms : SystemBase
     {
         // show transmission end screen, play sound
         yield return new WaitForSeconds(delay);
+        if (dialogueRunner.isDialogueRunning)
+        {
+            yield break;
+        }
         textMesh.gameObject.SetActive(false);
         textMesh.text = "";
         buffer.Clear();
