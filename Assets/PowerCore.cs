@@ -90,6 +90,7 @@ public class PowerCore : MonoBehaviour
         Transform sparkTransform = transform.Find("SparkPoint");
         if (withSpark)
         {
+            GetComponent<AudioSource>().Play();
             Instantiate(sparkPrefab, sparkTransform.position, sparkTransform.rotation, transform);
         }
         Instantiate(smokePrefab, sparkTransform.position, sparkTransform.rotation, transform);
