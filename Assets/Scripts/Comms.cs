@@ -39,6 +39,10 @@ public class Comms : SystemBase
     public AudioClip messageEndAudio;
     public AudioClip characterAudio;
 
+    [Header("Console UI")]
+    [SerializeField] GameObject onText;
+    [SerializeField] GameObject offText;
+
     private float _percentageOfJourney;
 
     public float PercentageOfJourney { get { return _percentageOfJourney; } }
@@ -204,4 +208,10 @@ public class Comms : SystemBase
         transform1.gameObject.SetActive(false);
     }
 
+    protected override void UpdateUI()
+    {
+            onText.SetActive(isPowered);
+            offText.SetActive(!isPowered);
+
+    }
 }
