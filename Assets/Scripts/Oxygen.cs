@@ -11,21 +11,40 @@ public class Oxygen : SystemBase
 {
     [SerializeField] Slider slider;
     [SerializeField] GameObject alarm;
+    [SerializeField] float startFadeLevel;
+    [SerializeField] float fadeTime;
+    bool isFading;
+    bool isAntiFading;
+    bool isDead;
+
+    [SerializeField] DialogueManager dialogueManager;
 
     protected override void UpdateMe()
     {
         if (isPowered)
         {
+            if (!isAntiFading)
+            {
+                SteamVR_Fade.Start(Color.clear, fadeTime);
+                isFading = false;
+                isAntiFading = true;
+            }
             Increase();
         }
         else
         {
+            if (currentParameter < startFadeLevel && !isFading)
+            {
+                SteamVR_Fade.Start(Color.black, fadeTime);
+                isFading = true;
+                isAntiFading = false;
+            }
             Decrease();
         }
-
-        float value = (startingParameter - currentParameter) / (startingParameter - minParameter);
-
-        
+        if (currentParameter == 0)
+        {
+            Fail();
+        }
     }
 
     protected override void UpdateUI()
@@ -36,8 +55,6 @@ public class Oxygen : SystemBase
             slider.value = proportionalValue;
 
         }
-
-        SteamVR_Fade.Start(Color.black * proportionalValue, 0);
 
         if (alarm != null)
         {
@@ -50,6 +67,18 @@ public class Oxygen : SystemBase
             {
                 //            Debug.Log("Turning alam off");
                 alarm.SetActive(false);
+            }
+        }
+    }
+
+    void Fail()
+    {
+        if (!isDead)
+        {
+            isDead = true;
+            if (dialogueManager)
+            {
+                dialogueManager.FailWithNode("FailState-Oxygen");
             }
         }
     }
