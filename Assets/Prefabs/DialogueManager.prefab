@@ -58,16 +58,16 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    triggerPercentage: 0.07
+    triggerPercentage: 0.075
     nodeToPlay: 
     waitForDialogue: 1
     triggered: 0
   - eventToFire:
       m_PersistentCalls:
         m_Calls: []
-    triggerPercentage: 0.1
+    triggerPercentage: 0.14
     nodeToPlay: Exposition1
-    waitForDialogue: 0
+    waitForDialogue: 1
     triggered: 0
   - eventToFire:
       m_PersistentCalls:
@@ -83,9 +83,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    triggerPercentage: 0.2
+    triggerPercentage: 0.3
     nodeToPlay: 
-    waitForDialogue: 0
+    waitForDialogue: 1
     triggered: 0
   - eventToFire:
       m_PersistentCalls:
@@ -101,9 +101,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    triggerPercentage: 0.5
+    triggerPercentage: 0.55
     nodeToPlay: 
-    waitForDialogue: 0
+    waitForDialogue: 1
     triggered: 0
   - eventToFire:
       m_PersistentCalls:
@@ -121,12 +121,13 @@ MonoBehaviour:
           m_CallState: 2
     triggerPercentage: 0.8
     nodeToPlay: 
-    waitForDialogue: 0
+    waitForDialogue: 1
     triggered: 0
   comms: {fileID: 0}
   dialogueRunner: {fileID: 0}
   cryo: {fileID: 0}
   playerTransform: {fileID: 0}
-  teleportParticlePrefab: {fileID: 0}
+  teleportParticlePrefab: {fileID: 6521686454825569402, guid: 752e629008d9f204ca8536d58cd0ec30,
+    type: 3}
   hasFailed: 0
   hasWon: 0

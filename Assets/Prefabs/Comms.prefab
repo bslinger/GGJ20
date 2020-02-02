@@ -59,7 +59,7 @@ MonoBehaviour:
   distanceText: {fileID: 0}
   dialogueManager: {fileID: 0}
   initialDistance: 10000
-  fullyPoweredStepPerSecond: 1
+  fullyPoweredStepPerSecond: 0.5
   signalThreshold: 0.2
   messageStartAudio: {fileID: 8300000, guid: 4c297a8bef236a0439c2b72b6d4d706e, type: 3}
   messageEndAudio: {fileID: 8300000, guid: b63b5c6f68faaee47ba73d31e4e28eae, type: 3}
