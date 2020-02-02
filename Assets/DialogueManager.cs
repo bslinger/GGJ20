@@ -20,10 +20,17 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     public NarrativeEvent[] narrativeEvents;
 
+    [Header("References")]
     public Comms comms;
     public DialogueRunner dialogueRunner;
+    public Crygenics cryo;
+    public Transform playerTransform;
+
+    [Header("Prefabs")]
+    public GameObject teleportParticlePrefab;
 
     public bool hasFailed = false;
+    public bool hasWon = false;
 
     // Start is called before the first frame update
     void Start()
@@ -80,6 +87,20 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(CoreBreakRoutine("FourthCoreBreak"));
     }
 
+    internal IEnumerator TriggerWinState()
+    {
+        hasWon = true;
+        dialogueRunner.StartDialogue("WinState-ColonistsRemain");
+        yield return new WaitForSeconds(3f);
+        foreach (GameObject cryo in cryo.GetAliveCryoBeds())
+        {
+            Instantiate(teleportParticlePrefab, cryo.transform.position, cryo.transform.rotation, cryo.transform);
+            yield return new WaitForSeconds(1f);
+        }
+        Instantiate(teleportParticlePrefab, playerTransform.position, Quaternion.identity, playerTransform);
+
+    }
+
     public IEnumerator CoreBreakRoutine(string node)
     {
         PowerCore brokenCore = null;
@@ -109,7 +130,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartFromNode(string node)
     {
-       
+        dialogueRunner.StartDialogue(node);
     }
 
 }

@@ -131,4 +131,14 @@ public class Crygenics : SystemBase
             aliveHumansSlider.value = aliveHumans;
         }
     }
+
+    public List<GameObject> GetAliveCryoBeds()
+    {
+        List<GameObject> alive = new List<GameObject>();
+        for (int i = nextDead; i< cryoBeds.Count; i++)
+        {
+            alive.Add(cryoBeds[i]);
+        }
+        return alive;
+    }
 }
