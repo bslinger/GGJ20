@@ -136,6 +136,13 @@ public class DialogueManager : MonoBehaviour
         Application.Quit();
     }
 
+    public IEnumerator OxygenOutFailStateRoutine()
+    {
+        yield return new WaitForSeconds(1f);
+        Debug.Log("QUIT");
+        Application.Quit();
+    }
+
     public IEnumerator CoreBreakRoutine(string node)
     {
         PowerCore brokenCore = null;

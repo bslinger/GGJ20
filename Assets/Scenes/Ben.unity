@@ -192,7 +192,7 @@ Transform:
   - {fileID: 1275766629}
   - {fileID: 1611537087}
   m_Father: {fileID: 1961127324}
-  m_RootOrder: 43
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &44959645
 GameObject:
@@ -922,7 +922,7 @@ Transform:
   - {fileID: 1950068405}
   - {fileID: 2066738994}
   m_Father: {fileID: 1961127324}
-  m_RootOrder: 41
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &224422302 stripped
 Transform:
@@ -1007,7 +1007,7 @@ Transform:
   - {fileID: 1009584412}
   - {fileID: 1114876444}
   m_Father: {fileID: 1961127324}
-  m_RootOrder: 42
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &261100891 stripped
 Transform:
@@ -1213,7 +1213,7 @@ PrefabInstance:
     - target: {fileID: 2091809976413907717, guid: 748699fc48c8a5c48a7eaea140e18b87,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 2091809976413907717, guid: 748699fc48c8a5c48a7eaea140e18b87,
         type: 3}
@@ -1491,7 +1491,7 @@ PrefabInstance:
     - target: {fileID: 2091809976413907717, guid: 748699fc48c8a5c48a7eaea140e18b87,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 2091809976413907717, guid: 748699fc48c8a5c48a7eaea140e18b87,
         type: 3}
@@ -2009,7 +2009,7 @@ Transform:
   - {fileID: 1540093921}
   - {fileID: 301019586}
   m_Father: {fileID: 1961127324}
-  m_RootOrder: 44
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &577322647 stripped
 Transform:
@@ -3193,7 +3193,7 @@ PrefabInstance:
     - target: {fileID: 307646894684836208, guid: 2494554e4cdc2ff4bb089aa452af0104,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 307646894684836208, guid: 2494554e4cdc2ff4bb089aa452af0104,
         type: 3}
@@ -4501,261 +4501,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
         type: 3}
-      propertyPath: narrativeEvents.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[3].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[4].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[5].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[6].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[7].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[8].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[9].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[10].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[11].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[12].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[13].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[14].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[15].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[16].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[17].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[18].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[19].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[20].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[21].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[23].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[24].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[25].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[26].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[27].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[28].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[29].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[30].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[31].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[32].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[33].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[34].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[35].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[36].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[37].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[38].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[39].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[40].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[41].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[42].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[43].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[44].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[45].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[46].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[47].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[48].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[49].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[50].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[51].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[52].eventToFire.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
       propertyPath: comms
       value: 
       objectReference: {fileID: 1067178226}
@@ -4766,1506 +4511,6 @@ PrefabInstance:
       objectReference: {fileID: 973003368}
     - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
         type: 3}
-      propertyPath: narrativeEvents.Array.data[3].triggerPercentage
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[3].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[3].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ThirdCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[3].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[3].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[3].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[4].triggerPercentage
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[4].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[4].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FourthCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[4].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[4].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[4].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[5].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[5].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[5].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[5].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[5].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[5].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[6].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[6].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[6].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[6].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[6].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[6].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[7].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[7].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[7].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[7].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[7].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[7].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[8].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[8].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[8].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[8].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[8].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[8].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[9].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[9].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[9].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[9].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[9].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[9].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[10].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[10].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[10].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[10].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[10].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[10].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[11].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[11].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[11].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[11].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[11].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[11].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[12].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[12].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[12].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[12].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[12].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[12].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[13].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[13].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[13].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[13].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[13].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[13].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[14].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[14].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[14].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[14].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[14].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[14].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[15].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[15].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[15].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[15].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[15].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[15].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[16].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[16].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[16].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[16].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[16].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[16].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[17].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[17].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[17].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[17].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[17].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[17].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[18].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[18].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[18].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[18].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[18].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[18].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[19].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[19].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[19].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[19].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[19].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[19].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[20].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[20].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[20].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[20].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[20].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[20].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[21].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[21].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[21].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[21].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[21].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[21].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[22].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[22].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[23].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[23].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[23].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[23].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[23].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[23].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[24].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[24].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[24].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[24].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[24].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[24].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[25].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[25].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[25].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[25].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[25].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[25].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[26].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[26].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[26].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[26].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[26].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[26].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[27].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[27].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[27].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[27].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[27].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[27].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[28].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[28].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[28].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[28].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[28].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[28].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[29].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[29].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[29].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[29].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[29].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[29].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[30].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[30].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[30].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[30].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[30].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[30].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[31].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[31].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[31].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[31].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[31].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[31].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[32].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[32].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[32].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[32].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[32].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[32].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[33].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[33].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[33].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[33].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[33].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[33].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[34].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[34].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[34].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[34].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[34].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[34].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[35].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[35].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[35].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[35].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[35].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[35].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[36].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[36].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[36].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[36].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[36].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[36].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[37].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[37].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[37].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[37].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[37].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[37].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[38].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[38].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[38].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[38].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[38].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[38].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[39].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[39].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[39].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[39].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[39].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[39].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[40].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[40].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[40].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[40].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[40].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[40].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[41].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[41].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[41].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[41].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[41].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[41].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[42].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[42].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[42].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[42].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[42].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[42].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[43].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[43].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[43].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[43].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[43].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[43].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[44].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[44].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[44].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[44].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[44].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[44].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[45].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[45].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[45].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[45].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[45].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[45].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[46].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[46].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[46].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[46].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[46].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[46].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[47].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[47].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[47].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[47].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[47].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[47].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[48].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[48].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[48].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[48].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[48].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[48].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[49].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[49].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[49].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[49].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[49].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[49].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[50].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[50].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[50].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[50].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[50].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[50].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[51].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[51].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[51].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[51].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[51].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[51].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[52].triggerPercentage
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[52].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 25028766}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[52].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SecondCoreBreak
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[52].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[52].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[52].eventToFire.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
       propertyPath: cryo
       value: 
       objectReference: {fileID: 1420168642}
@@ -6274,47 +4519,6 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 4468570500135493258}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: teleportParticlePrefab
-      value: 
-      objectReference: {fileID: 6521686454825569402, guid: 752e629008d9f204ca8536d58cd0ec30,
-        type: 3}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[0].triggerPercentage
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[0].waitForDialogue
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[1].triggerPercentage
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[1].waitForDialogue
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[2].waitForDialogue
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[4].waitForDialogue
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
-        type: 3}
-      propertyPath: narrativeEvents.Array.data[3].waitForDialogue
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6927582361449924093, guid: 1969f9f3329c2a94fa22b3d5577f2016,
         type: 3}
       propertyPath: m_Name
@@ -6770,7 +4974,7 @@ Transform:
   - {fileID: 1882518583}
   - {fileID: 1807517357}
   m_Father: {fileID: 1961127324}
-  m_RootOrder: 45
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1460076752
 PrefabInstance:
@@ -8162,11 +6366,6 @@ PrefabInstance:
       propertyPath: powerSourceObject
       value: 
       objectReference: {fileID: 1952075258}
-    - target: {fileID: 7056449300183238376, guid: 6e956a85d367dca4eaa4fd40011a6733,
-        type: 3}
-      propertyPath: dialogueManager
-      value: 
-      objectReference: {fileID: 25028766}
     - target: {fileID: 7056449300183238377, guid: 6e956a85d367dca4eaa4fd40011a6733,
         type: 3}
       propertyPath: m_Name
@@ -8593,7 +6792,7 @@ Transform:
   - {fileID: 52960781}
   - {fileID: 709211426}
   m_Father: {fileID: 1961127324}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1911609928
 Mesh:
@@ -9497,17 +7696,32 @@ PrefabInstance:
     - target: {fileID: -8395144002639726196, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -7170466346163925006, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -7117302697841357167, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6532652370084322920, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -5981192698648940919, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -5531648742122399331, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: -5212655465566186995, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
@@ -9589,6 +7803,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: -3531540249955609992, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: -3151554163418203837, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -2700194178795864487, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
@@ -9597,27 +7821,37 @@ PrefabInstance:
     - target: {fileID: -2541174081065763541, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -1857601856475315893, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: -1587496284514767852, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: -1241969194644116781, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -1197135997392280409, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: -1082826650061356594, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -929342126856782635, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
@@ -9639,15 +7873,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9ab5128b231d94d41ade50b3c5e9005c, type: 2}
+    - target: {fileID: -355718229468682032, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 664393004922265398, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 729263193787700833, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 806424594250833622, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485012699938805733, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 2122202694813900847, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
@@ -9657,22 +7906,47 @@ PrefabInstance:
     - target: {fileID: 2124812119272038905, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254756668001108422, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2774437856650658625, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 3569939465882371116, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4224801822505238522, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4336075328491449184, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4531245052595309282, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
       value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612570597785896667, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821932461132601228, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4829784970046455946, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
@@ -9687,7 +7961,7 @@ PrefabInstance:
     - target: {fileID: 5080524665316662676, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5127864357681444716, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
@@ -9698,6 +7972,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533805322750155570, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6165843540052470429, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
@@ -9714,10 +7993,25 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 7702895422849117438, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 7839584462639539456, guid: 5751cce865a444c6a96d8d509d4710fe,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279220037933735926, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399611412361314926, guid: 5751cce865a444c6a96d8d509d4710fe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5751cce865a444c6a96d8d509d4710fe, type: 3}
@@ -9845,7 +8139,7 @@ PrefabInstance:
     - target: {fileID: 4468570500288031644, guid: b3264e6993e02b4428ce1ba28cdbbec2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 4468570500288031644, guid: b3264e6993e02b4428ce1ba28cdbbec2,
         type: 3}
@@ -10446,6 +8740,11 @@ PrefabInstance:
       propertyPath: distanceText
       value: 
       objectReference: {fileID: 6625205988743075315}
+    - target: {fileID: 8673500482406048934, guid: 13bd2299d3fa0274ca769c92694d139d,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 25028766}
     - target: {fileID: 8673500482406048934, guid: 13bd2299d3fa0274ca769c92694d139d,
         type: 3}
       propertyPath: onText
