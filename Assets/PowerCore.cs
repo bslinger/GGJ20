@@ -34,6 +34,7 @@ public class PowerCore : MonoBehaviour
         else
         {
             PowerDown();
+            BurnOut(false);
         }
         yield return null;
         if (startingMomentum && connectedPoint == null)
@@ -83,11 +84,14 @@ public class PowerCore : MonoBehaviour
         }
     }
 
-    public void BurnOut()
+    public void BurnOut(bool withSpark = true)
     {
         PowerDown();
         Transform sparkTransform = transform.Find("SparkPoint");
-        Instantiate(sparkPrefab, sparkTransform.position, sparkTransform.rotation, transform);
+        if (withSpark)
+        {
+            Instantiate(sparkPrefab, sparkTransform.position, sparkTransform.rotation, transform);
+        }
         Instantiate(smokePrefab, sparkTransform.position, sparkTransform.rotation, transform);
         // particle systems and sounds
     }

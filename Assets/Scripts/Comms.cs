@@ -193,10 +193,14 @@ public class Comms : SystemBase
         }
     }
 
-    private IEnumerator TurnScreenOffAfterDelay(float delay = 3f)
+    private IEnumerator TurnScreenOffAfterDelay(float delay = 5f)
     {
         // show transmission end screen, play sound
         yield return new WaitForSeconds(delay);
+        if (dialogueRunner.isDialogueRunning)
+        {
+            yield break;
+        }
         textMesh.gameObject.SetActive(false);
         textMesh.text = "";
         buffer.Clear();
