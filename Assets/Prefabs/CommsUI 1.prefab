@@ -1147,7 +1147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContainer: {fileID: 0}
-  textSpeed: 0.01
+  textSpeed: 0.05
   optionButtons: []
   onDialogueStart:
     m_PersistentCalls:
