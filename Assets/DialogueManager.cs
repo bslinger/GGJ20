@@ -117,8 +117,9 @@ public class DialogueManager : MonoBehaviour
 
     public void OnColonistDie()
     {
-        if (cryo.GetAliveCryoBeds().Count == 0)
+        if (cryo.GetAliveCryoBeds().Count == 0 && !hasFailed)
         {
+            hasFailed = true;
             StartCoroutine(AllColonistsDeadRoutine());
         }
     }
