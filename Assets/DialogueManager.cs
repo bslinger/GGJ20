@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 using Yarn.Unity;
 using System;
@@ -36,7 +37,10 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        dialogueRunner.AddCommandHandler("break", (string[] parameters) => {
+            comms.AddLineBreak();
+        }
+        );
     }
 
     // Update is called once per frame
@@ -105,7 +109,10 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
         Instantiate(teleportParticlePrefab, playerTransform.position, Quaternion.identity, playerTransform);
+        SteamVR_Fade.Start(Color.white, 8f);
+        yield return new WaitForSeconds(8f);
 
+        Application.Quit();
     }
 
     public void OnColonistDie()
@@ -125,6 +132,8 @@ public class DialogueManager : MonoBehaviour
 
         Debug.Log("Fading to black");
         SteamVR_Fade.Start(Color.black, 4f);
+        yield return new WaitForSeconds(4f);
+        Application.Quit();
     }
 
     public IEnumerator CoreBreakRoutine(string node)
