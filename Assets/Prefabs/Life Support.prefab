@@ -123,7 +123,7 @@ MonoBehaviour:
   startingParameter: 20.1
   maxParameter: 30
   minParameter: 15
-  step: 0.1
+  step: 0.3
   powerSourceObject: {fileID: 7056449299596359225}
   isDebug: 1
   slider: {fileID: 0}

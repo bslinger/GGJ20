@@ -41,7 +41,7 @@ public class Oxygen : SystemBase
             }
             Decrease();
         }
-        if (currentParameter == 0)
+        if (currentParameter == minParameter)
         {
             Fail();
         }
@@ -78,7 +78,7 @@ public class Oxygen : SystemBase
             isDead = true;
             if (dialogueManager)
             {
-                dialogueManager.FailWithNode("FailState-Oxygen");
+                StartCoroutine(dialogueManager.OxygenOutFailStateRoutine());
             }
         }
     }
