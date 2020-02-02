@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd5d70c4a02bbc24490ee3fd83809c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powered: 1
+  powered: 0
   unpoweredMaterial: {fileID: 2100000, guid: 9ab5128b231d94d41ade50b3c5e9005c, type: 2}
   poweredMaterial: {fileID: 2100000, guid: d5ed8fb4993894c2d981b2c2832d9062, type: 2}
   sparkPrefab: {fileID: 5555697187890327156, guid: 87f0f65b7a7a7cf40bf8834b84028e84,
@@ -331,8 +331,8 @@ MonoBehaviour:
   smokePrefab: {fileID: 3790302123264148814, guid: 331f962a5a627f54986fd087af7ecf8e,
     type: 3}
   startingMomentum: 1
-  maxInitialAngularVelocity: 1
-  maxInitialLinearVelocity: 0.1
+  maxInitialAngularVelocity: 0.01
+  maxInitialLinearVelocity: 0.01
 --- !u!64 &216079202
 MeshCollider:
   m_ObjectHideFlags: 0

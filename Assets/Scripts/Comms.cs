@@ -21,6 +21,7 @@ public class Comms : SystemBase
     public GameObject commsUI;
     public Slider signalStrengthSlider;
     public TextMeshProUGUI distanceText;
+    public DialogueManager dialogueManager;
 
     [Header("Distance Settings")]
     public float initialDistance = 1000f;
@@ -28,6 +29,7 @@ public class Comms : SystemBase
     public float signalThreshold = .2f;
     
     private DialogueRunner dialogueRunner;
+   
     private GameObject dialogueCanvas;
     private TextMeshProUGUI textMesh;
     private float distanceLeft;
@@ -71,6 +73,12 @@ public class Comms : SystemBase
 
     protected override void UpdateMe()
     {
+
+        if(PercentageOfJourney >= 1 && !dialogueManager.hasWon && !dialogueManager.hasFailed)
+        {
+            StartCoroutine(dialogueManager.TriggerWinState());
+        }
+
         if (isPowered)
         {
           if (!powered)
@@ -96,6 +104,7 @@ public class Comms : SystemBase
         if (currentParameter > signalThreshold)
         {
             distanceLeft -= fullyPoweredStepPerSecond * (currentParameter / maxParameter);
+            distanceLeft = Mathf.Clamp(distanceLeft, 0, initialDistance);
             _percentageOfJourney = 1 - (distanceLeft / initialDistance);
         }
 
@@ -162,6 +171,7 @@ public class Comms : SystemBase
     public void OnDialogueStart()
     {
         textMesh.text = "";
+        buffer.Clear();
         textMesh.gameObject.SetActive(true);
         StartCoroutine(CommsSounds());
     }
