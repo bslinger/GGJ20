@@ -128,8 +128,8 @@ MonoBehaviour:
   isDebug: 1
   slider: {fileID: 0}
   alarm: {fileID: 0}
-  startFadeLevel: 18
-  fadeTime: 3
+  startFadeLevel: 16
+  fadeTime: 20
   dialogueManager: {fileID: 0}
 --- !u!1 &7056449300183238377
 GameObject:
