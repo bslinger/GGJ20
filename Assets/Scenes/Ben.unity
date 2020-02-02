@@ -8152,6 +8152,11 @@ PrefabInstance:
       propertyPath: alarm
       value: 
       objectReference: {fileID: 6820430974372567986}
+    - target: {fileID: 7056449299596359227, guid: 6e956a85d367dca4eaa4fd40011a6733,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 25028766}
     - target: {fileID: 7056449300183238376, guid: 6e956a85d367dca4eaa4fd40011a6733,
         type: 3}
       propertyPath: powerSourceObject
