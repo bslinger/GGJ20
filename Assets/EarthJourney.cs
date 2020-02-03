@@ -17,6 +17,7 @@ public class EarthJourney : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (comms == null) return;
         float percentage = comms.PercentageOfJourney;
 
         transform.position = Vector3.Lerp(startPosition, endPosition, percentage);
