@@ -59,3 +59,8 @@ sysinfo.txt
 crashlytics-build.properties
 
 Assets/YarnSpinner/Examples/
+.idea/GGJ20.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
