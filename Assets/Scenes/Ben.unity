@@ -4617,6 +4617,12 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 4468570500135493258}
+    - target: {fileID: 6927582361449924092, guid: 1969f9f3329c2a94fa22b3d5577f2016,
+        type: 3}
+      propertyPath: playerTeleportParticlePrefab
+      value: 
+      objectReference: {fileID: 8888537514341091601, guid: b6aef4e7d4318724fb8722b237b0aa45,
+        type: 3}
     - target: {fileID: 6927582361449924093, guid: 1969f9f3329c2a94fa22b3d5577f2016,
         type: 3}
       propertyPath: m_Name
