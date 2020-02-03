@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.Events;
-using Yarn.Unity;
-using System;
 using Valve.VR;
+using Yarn.Unity;
 
 [Serializable]
 public struct NarrativeEvent
@@ -30,6 +28,7 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Prefabs")]
     public GameObject teleportParticlePrefab;
+    [SerializeField] GameObject playerTeleportParticlePrefab;
 
     public bool hasFailed = false;
     public bool hasWon = false;
@@ -98,27 +97,30 @@ public class DialogueManager : MonoBehaviour
         if (cryo.GetAliveCryoBeds().Count == 6)
         {
             dialogueRunner.StartDialogue("WinState-AllColonistsRemain");
-        }
+        } else
         {
             dialogueRunner.StartDialogue("WinState-SomeColonistsRemain");
         }
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(25f);
         foreach (GameObject cryo in cryo.GetAliveCryoBeds())
         {
             Instantiate(teleportParticlePrefab, cryo.transform.position, cryo.transform.rotation, cryo.transform);
             yield return new WaitForSeconds(1f);
         }
-        Instantiate(teleportParticlePrefab, playerTransform.position, Quaternion.identity, playerTransform);
-        SteamVR_Fade.Start(Color.white, 8f);
-        yield return new WaitForSeconds(8f);
+
+        Instantiate(playerTeleportParticlePrefab, playerTransform.position, playerTransform.rotation, playerTransform);
+        
+        SteamVR_Fade.Start(Color.white, 10f);
+        yield return new WaitForSeconds(10f);
 
         Application.Quit();
     }
 
     public void OnColonistDie()
     {
-        if (cryo.GetAliveCryoBeds().Count == 0)
+        if (cryo.GetAliveCryoBeds().Count == 0 && !hasFailed)
         {
+            hasFailed = true;
             StartCoroutine(AllColonistsDeadRoutine());
         }
     }

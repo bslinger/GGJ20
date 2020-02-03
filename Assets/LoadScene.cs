@@ -9,6 +9,7 @@ public class LoadScene : MonoBehaviour
     [SerializeField] int waitTime;
     [SerializeField] int fadeTime;
     [SerializeField] GameObject player;
+    [SerializeField] string sceneToLoad = "Ben";
 
 
     private void Start()
@@ -16,21 +17,26 @@ public class LoadScene : MonoBehaviour
         StartCoroutine(LoadGame());
     }
 
-    IEnumerator LoadGame()
+    public LoadScene(int waitTime, int fadeTime, string sceneToLoad)
+    {
+        this.waitTime = waitTime;
+        this.fadeTime = fadeTime;
+        this.sceneToLoad = sceneToLoad;
+    }
+
+    public IEnumerator LoadGame()
     {
         yield return new WaitForSeconds(waitTime);
         SteamVR_Fade.Start(Color.black, fadeTime);
 
         yield return new WaitForSeconds(fadeTime);
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Ben");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneToLoad);
         Destroy(player);
         while (!asyncLoad.isDone)
         {
             yield return null;
-        }
-        
-        
+        }  
 
     }
 

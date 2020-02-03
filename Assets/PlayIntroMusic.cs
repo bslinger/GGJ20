@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayIntroMusic : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip gameMusic;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +22,15 @@ public class PlayIntroMusic : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
 
         }
+        if (gameMusic == null) 
+        {
+            Debug.Log("Audio Clip not found");
+            Destroy(this); 
+        }
 
-        Destroy(this);
+        audioSource.clip = gameMusic;
+        audioSource.loop = true;
+        audioSource.Play();
     }
 
 }

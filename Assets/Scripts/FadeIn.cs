@@ -5,18 +5,19 @@ using Valve.VR;
 
 public class FadeIn : MonoBehaviour
 {
-    
+    [SerializeField] float fadeTime = 2f; 
 
     // Start is called before the first frame update
     void Start()
     {
         SteamVR_Fade.Start(Color.black, 0);
-        SteamVR_Fade.Start(Color.clear, 2);
+        SteamVR_Fade.Start(Color.clear, fadeTime);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
 }
