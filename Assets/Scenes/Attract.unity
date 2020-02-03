@@ -468,10 +468,10 @@ RectTransform:
   m_Father: {fileID: 502166312}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -193}
-  m_SizeDelta: {x: 800, y: 500}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -454}
+  m_SizeDelta: {x: 0, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &597627646
 MonoBehaviour:
@@ -1273,14 +1273,14 @@ RectTransform:
   m_GameObject: {fileID: 1219767741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.4139, y: 2.4139, z: 2.4139}
   m_Children: []
   m_Father: {fileID: 502166312}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -328, y: -188}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 231, y: 174}
   m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219767743
@@ -1595,7 +1595,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 157, y: 135}
+  m_AnchoredPosition: {x: 162, y: 325}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1685878660
@@ -1616,7 +1616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'A game by Ben, Trevor, Richard and Ryan
+  m_text: 'A game by Ben Slinger, Trevor Scott, Richard Gubb and Ryan Stock
 
 
     Music and sound by Mestre Andre'
@@ -1648,13 +1648,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 23.75
-  m_fontSizeBase: 36
+  m_fontSize: 43.9
+  m_fontSizeBase: 43.9
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1686,15 +1686,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -310.4735, y: 0, z: 0, w: -27.84517}
+  m_margin: {x: -711.29425, y: -125.445984, z: -376.2495, w: -27.84517}
   m_textInfo:
     textComponent: {fileID: 1685878660}
-    characterCount: 72
+    characterCount: 97
     spriteCount: 0
-    spaceCount: 14
-    wordCount: 14
+    spaceCount: 18
+    wordCount: 18
     linkCount: 0
-    lineCount: 3
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
