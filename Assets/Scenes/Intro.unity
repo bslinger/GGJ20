@@ -1591,6 +1591,7 @@ MonoBehaviour:
   waitTime: 24
   fadeTime: 2
   player: {fileID: 457734407}
+  sceneToLoad: Ben
 --- !u!1001 &2142183877
 PrefabInstance:
   m_ObjectHideFlags: 0
