@@ -14,6 +14,7 @@ public abstract class SystemBase : MonoBehaviour
     [SerializeField] GameObject powerSourceObject;
     PowerSource powerSource;
     AudioSource audioSource;
+    protected DialogueManager dialogue;
 
     private void Start()
     {
@@ -28,6 +29,7 @@ public abstract class SystemBase : MonoBehaviour
         }
         audioSource = GetComponent<AudioSource>();
         currentParameter = startingParameter;
+        dialogue = (DialogueManager)FindObjectOfType(typeof(DialogueManager));
         StartMe();
     }
 
@@ -44,12 +46,12 @@ public abstract class SystemBase : MonoBehaviour
 
     public void Increase()
     {
-        Increase(1f);
+        if(!dialogue.hasWon && !dialogue.allDead) Increase(1f);
     }
 
     public void Decrease ()
     {
-        Decrease(1f);
+        if (!dialogue.hasWon && !dialogue.allDead) Decrease(1f);
     }
 
     public void Decrease(float stepProportion)

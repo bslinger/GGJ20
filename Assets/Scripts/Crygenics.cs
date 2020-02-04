@@ -53,7 +53,7 @@ public class Crygenics : SystemBase
             Decrease();
         }
 
-        if (currentParameter < deathTemperature)
+        if (currentParameter < deathTemperature && (!dialogue.hasWon))
         {
             deathTimer += Time.deltaTime;
             float deathPercentage = deathTimer / timeBetweenDeaths;

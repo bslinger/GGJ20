@@ -101,7 +101,9 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueRunner.StartDialogue("WinState-SomeColonistsRemain");
         }
-        yield return new WaitForSeconds(25f);
+        yield return new WaitWhile(() => {
+            return dialogueRunner.isDialogueRunning;
+        });
         foreach (GameObject cryo in cryo.GetAliveCryoBeds())
         {
             Instantiate(teleportParticlePrefab, cryo.transform.position, cryo.transform.rotation, cryo.transform);
@@ -109,11 +111,9 @@ public class DialogueManager : MonoBehaviour
         }
 
         Instantiate(playerTeleportParticlePrefab, playerTransform.position, playerTransform.rotation, playerTransform);
-        
-        SteamVR_Fade.Start(Color.white, 10f);
-        yield return new WaitForSeconds(10f);
 
-        Application.Quit();
+        LoadScene load = new LoadScene(0, 10, "Attract", Color.grey, true);
+        StartCoroutine(load.LoadGame());
     }
 
     public void OnColonistDie()
@@ -127,15 +127,15 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator AllColonistsDeadRoutine()
     {
+        hasFailed = true;
         dialogueRunner.StartDialogue("FailState-AllColonistsDead");
         yield return new WaitWhile(() => {
             return dialogueRunner.isDialogueRunning;
             });
 
         Debug.Log("Fading to black");
-        SteamVR_Fade.Start(Color.black, 4f);
-        yield return new WaitForSeconds(4f);
-        Application.Quit();
+        LoadScene load = new LoadScene(0, 4, "Attract", Color.black);
+        StartCoroutine(load.LoadGame());
     }
 
     public IEnumerator OxygenOutFailStateRoutine()
