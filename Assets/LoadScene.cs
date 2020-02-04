@@ -11,7 +11,7 @@ public class LoadScene : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] string sceneToLoad = "Ben";
     [SerializeField] Color color;
-    bool stopMusic;
+    [SerializeField] bool stopMusic = false;
 
 
     private void Start()
@@ -42,16 +42,14 @@ public class LoadScene : MonoBehaviour
 
         yield return new WaitForSeconds(waitTime);
 
-        
+        SteamVR_Fade.Start(color, fadeTime);
         if (stopMusic)
         {
             AudioSource music;
             GameObject go = GameObject.FindGameObjectWithTag("music");
             music = go.GetComponent<AudioSource>();
-            StartCoroutine(StopMusic(music));
+            StartCoroutine(StopMusic(go, music));
         }
-        SteamVR_Fade.Start(color, fadeTime);
-
         yield return new WaitForSeconds(fadeTime);
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneToLoad);
@@ -63,17 +61,20 @@ public class LoadScene : MonoBehaviour
 
     }
 
-    IEnumerator StopMusic(AudioSource music)
+    IEnumerator StopMusic(GameObject musicPlayer, AudioSource music)
     {
         float vol = music.volume;
-        while (music.volume != 0)
+        float elapsedTime = 0;
+        while (elapsedTime <= 1)
         {
-            float newVol = (vol * (music.volume / vol)) * Time.deltaTime;
+            elapsedTime += Time.deltaTime;
+            float newVol = Time.deltaTime;
             Mathf.Clamp(newVol, 0, 1);
             music.volume -= newVol;
             Debug.Log(newVol);
             yield return null;
         }
+        Destroy(musicPlayer);
     }
 
 }

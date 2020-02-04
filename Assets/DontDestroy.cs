@@ -6,6 +6,7 @@ public class DontDestroy : MonoBehaviour
 {
 
     [SerializeField] string tag;
+    [SerializeField] bool dontDestroy = true;
     // Start is called before the first frame update
     void Awake()
     {
@@ -16,7 +17,7 @@ public class DontDestroy : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        DontDestroyOnLoad(this.gameObject);
+        if(dontDestroy) DontDestroyOnLoad(this.gameObject);
     }
 
 }

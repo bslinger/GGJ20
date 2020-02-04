@@ -46,12 +46,12 @@ public abstract class SystemBase : MonoBehaviour
 
     public void Increase()
     {
-        if(!dialogue.hasWon && !dialogue.allDead) Increase(1f);
+        if(dialogue == null || (!dialogue.hasWon && !dialogue.allDead)) Increase(1f);
     }
 
     public void Decrease ()
     {
-        if (!dialogue.hasWon && !dialogue.allDead) Decrease(1f);
+        if (dialogue == null || (!dialogue.hasWon && !dialogue.allDead)) Decrease(1f);
     }
 
     public void Decrease(float stepProportion)

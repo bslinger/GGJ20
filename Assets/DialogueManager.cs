@@ -50,7 +50,7 @@ public class DialogueManager : MonoBehaviour
         for(int i = 0; i < narrativeEvents.Length; i++)
         {
             NarrativeEvent ev = narrativeEvents[i];
-            if (!ev.triggered && ev.triggerPercentage < comms.PercentageOfJourney)
+            if (!ev.triggered && ev.triggerPercentage < comms.PercentageOfJourney && !allDead)
             {
                 if (ev.waitForDialogue && dialogueRunner.isDialogueRunning)
                 {
@@ -141,9 +141,9 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator OxygenOutFailStateRoutine()
     {
-        yield return new WaitForSeconds(1f);
-        Debug.Log("QUIT");
-        Application.Quit();
+        LoadScene load = new LoadScene(0, 1, "Attract", Color.black);
+        StartCoroutine(load.LoadGame());
+        yield return null;
     }
 
     public IEnumerator CoreBreakRoutine(string node)
