@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: music
+  dontDestroy: 1
 --- !u!82 &8554264342061811386
 AudioSource:
   m_ObjectHideFlags: 0

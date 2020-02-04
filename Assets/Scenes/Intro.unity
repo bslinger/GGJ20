@@ -1655,6 +1655,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 8554264342061811386, guid: d139460524b28524ba43f458f1a6ca0a,
+        type: 3}
+      propertyPath: BypassEffects
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8554264342061811387, guid: d139460524b28524ba43f458f1a6ca0a,
         type: 3}
       propertyPath: m_LocalPosition.x
