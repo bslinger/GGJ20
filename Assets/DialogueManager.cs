@@ -32,6 +32,7 @@ public class DialogueManager : MonoBehaviour
 
     public bool hasFailed = false;
     public bool hasWon = false;
+    public bool allDead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -127,7 +128,7 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator AllColonistsDeadRoutine()
     {
-        hasFailed = true;
+        allDead = true;
         dialogueRunner.StartDialogue("FailState-AllColonistsDead");
         yield return new WaitWhile(() => {
             return dialogueRunner.isDialogueRunning;
