@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Valve.VR;
@@ -113,7 +114,7 @@ public class DialogueManager : MonoBehaviour
 
         Instantiate(playerTeleportParticlePrefab, playerTransform.position, playerTransform.rotation, playerTransform);
 
-        LoadScene load = new LoadScene(0, 10, "Attract", Color.grey, true);
+        LoadScene load = new LoadScene(0, 10, "Attract", Color.grey);
         StartCoroutine(load.LoadGame());
     }
 
@@ -150,15 +151,15 @@ public class DialogueManager : MonoBehaviour
     {
         PowerCore brokenCore = null;
         PowerCore[] cores = FindObjectsOfType<PowerCore>();
+        List<PowerCore> pcList = new List<PowerCore>();
         foreach (PowerCore core in cores)
         {
-            if (core.powered && core.GetPoweredPoint() != "CommsConnectPoint")
+            if (core.powered)// && core.GetPoweredPoint() != "CommsConnectPoint")
             {
-                brokenCore = core;
-                break;
+                pcList.Add(core);
             }
         }
-
+        brokenCore = pcList[UnityEngine.Random.Range(0,pcList.Count-1)];
         if (brokenCore != null)
         {
             brokenCore.BurnOut();
