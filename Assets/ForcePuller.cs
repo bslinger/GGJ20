@@ -20,6 +20,8 @@ public class ForcePuller : MonoBehaviour
     private GameObject pointingAt;
     private Hand hand;
 
+    private IEnumerator pullCoroutineRunning;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,8 +69,18 @@ public class ForcePuller : MonoBehaviour
         Debug.Log("Trigger pulled", pointingAt);
         if (pointingAt != null)
         {
-            hand.AttachObject(pointingAt.GetComponentInParent<Interactable>().gameObject, GrabTypes.Grip);
+            if (pullCoroutineRunning != null)
+            {
+                StopCoroutine(pullCoroutineRunning);
+            }
+            GameObject toAttach = pointingAt.GetComponentInParent<Interactable>().gameObject;
+            Debug.Log("to attach", toAttach);
+            float timeToLerp = (pointingAt.transform.position = hand.transform.position).sqrMagnitude * .2f;
+            StartCoroutine(Utils.LerpThen(toAttach, hand.transform.position, timeToLerp, () => {
+                Debug.Log("Lerp ended, attaching", this.hand);
+                this.hand.AttachObject(toAttach.GetComponentInParent<Interactable>().gameObject, GrabTypes.Grip); 
+            }));
+            
         }
-        
     }
 }
