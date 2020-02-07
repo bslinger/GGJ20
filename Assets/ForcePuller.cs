@@ -75,7 +75,8 @@ public class ForcePuller : MonoBehaviour
             }
             GameObject toAttach = pointingAt.GetComponentInParent<Interactable>().gameObject;
             Debug.Log("to attach", toAttach);
-            float timeToLerp = (pointingAt.transform.position = hand.transform.position).sqrMagnitude * .2f;
+            float timeToLerp = (pointingAt.transform.position - hand.transform.position).sqrMagnitude * .1f;
+            
             StartCoroutine(Utils.LerpThen(toAttach, hand.transform.position, timeToLerp, () => {
                 Debug.Log("Lerp ended, attaching", this.hand);
                 this.hand.AttachObject(toAttach.GetComponentInParent<Interactable>().gameObject, GrabTypes.Grip); 
