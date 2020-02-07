@@ -72,6 +72,10 @@ public class PowerCore : MonoBehaviour
         {
             ConnectToPoint(hoverPoint);
         }
+        else
+        {
+            GetComponent<Rigidbody>().isKinematic = false;
+        }
     }
 
     public void OnAttachedToHand()

@@ -14,6 +14,7 @@ public class ConnectPoint : MonoBehaviour, PowerSource
     AudioSource audioSource;
     public AudioClip powerUpAudio;
     public AudioClip powerDownAudio;
+    Rigidbody coreRb;
    
 
     // Start is called before the first frame update
@@ -65,8 +66,8 @@ public class ConnectPoint : MonoBehaviour, PowerSource
         connectedCore.transform.position = transform.position;
         connectedCore.transform.rotation = transform.rotation;
         connectedCore.transform.Translate(-attachpointOffsetTransform.localPosition,Space.Self);
-      
         connectedCore.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        connectedCore.GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<CapsuleCollider>().enabled = false;
         ghostCylinderPrefab.SetActive(false);
 
@@ -84,6 +85,8 @@ public class ConnectPoint : MonoBehaviour, PowerSource
     public void DisconnectCore()
     {
         connectedCore.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
+
         GetComponent<CapsuleCollider>().enabled = true;
         Debug.Log($"Core {connectedCore.name} disconnected from {name}");
 
