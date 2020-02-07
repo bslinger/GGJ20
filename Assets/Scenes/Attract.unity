@@ -1142,11 +1142,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Powercore_v2
       objectReference: {fileID: 0}
-    - target: {fileID: 3779012327204247777, guid: b789bd954f70ea144b095a3a6670703a,
-        type: 3}
-      propertyPath: releaseVelocityStyle
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4184498430664999955, guid: b789bd954f70ea144b095a3a6670703a,
         type: 3}
       propertyPath: powered

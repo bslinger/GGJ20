@@ -7,15 +7,11 @@ using Valve.VR.InteractionSystem;
 public class ForcePuller : MonoBehaviour
 {
 
-    public float pullForce = 100f;
+    public float pullSpeed = 300f;
 
     public SteamVR_Action_Boolean activeAction;
 
     public SteamVR_Input_Sources handRef;
-
-    public float slowDistance = 3f;
-
-    public float snapDistance = 2f;
 
     private GameObject pointingAt;
     private Hand hand;
@@ -75,11 +71,10 @@ public class ForcePuller : MonoBehaviour
             }
             GameObject toAttach = pointingAt.GetComponentInParent<Interactable>().gameObject;
             Debug.Log("to attach", toAttach);
-            float timeToLerp = (pointingAt.transform.position - hand.transform.position).sqrMagnitude * .1f;
-            
+            float timeToLerp = (toAttach.transform.position - hand.transform.position).sqrMagnitude / pullSpeed;
             StartCoroutine(Utils.LerpThen(toAttach, hand.transform.position, timeToLerp, () => {
                 Debug.Log("Lerp ended, attaching", this.hand);
-                this.hand.AttachObject(toAttach.GetComponentInParent<Interactable>().gameObject, GrabTypes.Grip); 
+                this.hand.AttachObject(toAttach, GrabTypes.Grip); 
             }));
             
         }
