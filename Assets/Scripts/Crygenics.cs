@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
 public class Crygenics : SystemBase
 {
@@ -12,7 +13,8 @@ public class Crygenics : SystemBase
     [SerializeField] float timeBetweenDeaths;
     [SerializeField] Slider deadHumansSlider;
     [SerializeField] Slider aliveHumansSlider;
-    [SerializeField] Text temperatureText;
+    public Slider powerSlider;
+    [SerializeField] TextMeshProUGUI temperatureText;
     [SerializeField] GameObject alarm;
     
     [SerializeField] List<GameObject> cryoBeds;
@@ -143,6 +145,8 @@ public class Crygenics : SystemBase
         {
             aliveHumansSlider.value = aliveHumans;
         }
+
+        powerSlider.value = 1 - proportionalValue;
     }
 
     public List<GameObject> GetAliveCryoBeds()

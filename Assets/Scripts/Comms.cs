@@ -108,7 +108,7 @@ public class Comms : SystemBase
             _percentageOfJourney = 1 - (distanceLeft / initialDistance);
         }
 
-        distanceText.text = ((int)distanceLeft).ToString();
+        distanceText.text = "Remaining: " + ((int)distanceLeft).ToString() + "km";
     }
 
     void ChangeToPowered()

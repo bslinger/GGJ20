@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SlowRotate : SystemBase
 {
@@ -9,6 +11,7 @@ public class SlowRotate : SystemBase
     [SerializeField] Vector3 rotationAxis;
     [SerializeField] Slider slider;
     [SerializeField] GameObject alarm;
+    public TextMeshProUGUI statusText;
 
     // Update is called once per frame
     protected override void UpdateMe()
@@ -22,6 +25,7 @@ public class SlowRotate : SystemBase
             Increase();
         }
         target.Rotate(rotationAxis * currentParameter);
+        statusText.text = Math.Round((0.1f - currentParameter) * 1000) + "%";
     }
 
     protected override void UpdateUI()
