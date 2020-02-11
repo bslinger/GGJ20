@@ -11,14 +11,20 @@
         <e p="ConnectPoint.cs" t="Include" />
         <e p="DialogueManager.cs" t="Include" />
         <e p="DontDestroy.cs" t="Include" />
+        <e p="EarthJourney.cs" t="Include" />
         <e p="ForcePuller.cs" t="Include" />
+        <e p="HeadsetOnOff.cs" t="Include" />
         <e p="LoadScene.cs" t="Include" />
         <e p="Materials" t="Include">
           <e p="GlassShader.shader" t="Include" />
         </e>
+        <e p="MovePlayer.cs" t="Include" />
         <e p="Panel.cs" t="Include" />
         <e p="PlayIntroMusic.cs" t="Include" />
         <e p="PowerCore.cs" t="Include" />
+        <e p="RandomColor.cs" t="Include" />
+        <e p="resetMusicPlayer.cs" t="Include" />
+        <e p="ResetPowerCore.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Alarm.cs" t="Include" />
           <e p="CarbonDioxide.cs" t="Include" />
@@ -31,6 +37,7 @@
           <e p="PowerComponent.cs" t="Include" />
           <e p="SlowRotate.cs" t="Include" />
           <e p="SystemBase.cs" t="Include" />
+          <e p="Utils.cs" t="Include" />
         </e>
         <e p="Space" t="Include">
           <e p="Earth" t="Include">
@@ -49,6 +56,7 @@
             </e>
           </e>
         </e>
+        <e p="StartGame.cs" t="Include" />
         <e p="StatusLights.cs" t="Include" />
         <e p="SteamVR" t="Include">
           <e p="Editor" t="Include">
