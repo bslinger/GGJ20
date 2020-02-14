@@ -32,7 +32,7 @@ public class Lights : SystemBase
         }
         else
         {
-            Increase();
+            Decrease(); // was Increase();
             if (powerUp != null)
             {
                 StopAllCoroutines();

@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using Valve.VR;
@@ -9,13 +11,13 @@ using UnityEngine.UI;
 
 public class Oxygen : SystemBase
 {
-    [SerializeField] Slider slider;
     [SerializeField] GameObject alarm;
     [SerializeField] float startFadeLevel;
     [SerializeField] float fadeTime;
     bool isFading;
     bool isAntiFading;
     bool isDead;
+    [SerializeField] TextMeshProUGUI levelText;
 
     [SerializeField] DialogueManager dialogueManager;
 
@@ -44,6 +46,11 @@ public class Oxygen : SystemBase
         if (currentParameter == minParameter)
         {
             Fail();
+        }
+
+        if (levelText)
+        {
+            //levelText.text = Math.Round((0.1f - currentParameter) * 1000) + "%";
         }
     }
 

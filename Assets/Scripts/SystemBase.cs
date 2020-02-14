@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -14,6 +15,8 @@ public abstract class SystemBase : MonoBehaviour
     [SerializeField] float step;
     [FormerlySerializedAs("panelObject")] [SerializeField] GameObject panelEnabledObject;
     [FormerlySerializedAs("panelDisableddObject")] [SerializeField] GameObject panelDisabledObject;
+    [SerializeField] public Slider slider;
+    [SerializeField] TextMeshProUGUI statusText;
     
     protected float currentParameter;
     protected bool isPowered;
@@ -32,6 +35,8 @@ public abstract class SystemBase : MonoBehaviour
     
     private bool animatingPanelColor = false;
     private float panelTransitionPercent = 1;
+
+    protected float proportionalValue = 1f;
 
     private void Start()
     {
@@ -125,6 +130,16 @@ public abstract class SystemBase : MonoBehaviour
             {
                 Decrease();
             }
+        }
+        proportionalValue = (currentParameter - minParameter) / (maxParameter - minParameter);
+        if (slider)
+        {
+            slider.value = proportionalValue;
+        }
+        if (statusText != null)
+        {
+            //Debug.Log(currentParameter + " " + minParameter + " " + maxParameter + " " + proportionalValue.ToString());
+            statusText.text = Math.Round(proportionalValue * 100) + "%";
         }
 
         CheckPower();

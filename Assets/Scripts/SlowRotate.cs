@@ -9,35 +9,28 @@ public class SlowRotate : SystemBase
 {
     [SerializeField] Transform target;
     [SerializeField] Vector3 rotationAxis;
-    [SerializeField] Slider slider;
     [SerializeField] GameObject alarm;
-    public TextMeshProUGUI statusText;
 
     // Update is called once per frame
     protected override void UpdateMe()
     {
         if (isPowered)
         {
-            Decrease();
+            Increase();
         }
         else
         {
-            Increase();
+            Decrease();
         }
-        target.Rotate(rotationAxis * currentParameter);
-        statusText.text = Math.Round((0.1f - currentParameter) * 1000) + "%";
+        target.Rotate(rotationAxis * (0.1f - currentParameter));
+        //statusText.text = Math.Round((0.1f - currentParameter) * 1000) + "%";
     }
 
     protected override void UpdateUI()
     {
-        float proportionalValue = (maxParameter - currentParameter) / (maxParameter - minParameter);
-        if (slider) {
-            slider.value = proportionalValue;
-
-        }
         if (alarm)
         {
-            if (proportionalValue <= 0.2f)
+            if (proportionalValue <= 0.8f)
             {
                 alarm.SetActive(true);
             }
