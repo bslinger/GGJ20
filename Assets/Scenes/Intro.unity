@@ -509,7 +509,7 @@ MonoBehaviour:
   waitTime: 24
   fadeTime: 2
   player: {fileID: 457734407}
-  sceneToLoad: Ben
+  sceneToLoad: Ben Updated
   color: {r: 0, g: 0, b: 0, a: 1}
   stopMusic: 0
 --- !u!4 &839264121

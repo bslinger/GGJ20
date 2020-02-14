@@ -10,6 +10,8 @@ public class HeadsetOnOff : MonoBehaviour
     [SerializeField] SteamVR_Input_Sources input;
     [SerializeField] Camera ExternalCamera;
     [SerializeField] Canvas canvas;
+    [SerializeField] bool overrideHeadset = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +24,24 @@ public class HeadsetOnOff : MonoBehaviour
         activeAction.AddOnStateUpListener(this.HeadsetOff, input);
     }
 
+    private void Update()
+    {
+        if(overrideHeadset)
+        {
+            enableHeadset();
+        }
+    }
+
     void enableHeadset()
     {
         ExternalCamera.enabled = false;
         canvas.enabled = false;
+    }
+
+    void disableHeadset()
+    {
+        ExternalCamera.enabled = true;
+        canvas.enabled = true;
     }
 
     void HeadsetOn(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
@@ -35,7 +51,6 @@ public class HeadsetOnOff : MonoBehaviour
 
     void HeadsetOff(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
     {
-        ExternalCamera.enabled = true;
-        canvas.enabled = true;
+        disableHeadset();
     }
 }

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: 9bd70f899c4cd2a4198af0b5d8257e47
   - enabled: 1
+    path: Assets/Scenes/Ben Updated.unity
+    guid: 4b3bacd300e2849b0af3dd09ba781937
+  - enabled: 0
     path: Assets/Scenes/Ben.unity
     guid: c0b9bb04fda85f34d9ebd6c507e93582
   m_configObjects: {}

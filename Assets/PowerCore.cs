@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PowerCore : MonoBehaviour
 {
 
@@ -17,15 +18,17 @@ public class PowerCore : MonoBehaviour
     public GameObject smokePrefab;
 
     private Light pointLight;
+    private Rigidbody rb;
 
     [SerializeField] bool startingMomentum = true;
     [SerializeField] float maxInitialAngularVelocity;
     [SerializeField] float maxInitialLinearVelocity;
+    [SerializeField] bool alwaysKinematic = false;
 
     // Start is called before the first frame update
     IEnumerator Start()
     {
-
+        rb = GetComponent<Rigidbody>();
         pointLight = transform.Find("Point Light").gameObject.GetComponent<Light>();
         if (powered)
         {
@@ -39,15 +42,9 @@ public class PowerCore : MonoBehaviour
         yield return null;
         if (startingMomentum && connectedPoint == null)
         {
-            GetComponent<Rigidbody>().angularVelocity = new Vector3(Random.Range(-maxInitialAngularVelocity, maxInitialAngularVelocity), Random.Range(-maxInitialAngularVelocity, maxInitialAngularVelocity), Random.Range(-maxInitialAngularVelocity, maxInitialAngularVelocity));
-            GetComponent<Rigidbody>().velocity = new Vector3(Random.Range(-maxInitialLinearVelocity, maxInitialLinearVelocity), Random.Range(-maxInitialLinearVelocity, maxInitialLinearVelocity), Random.Range(-maxInitialLinearVelocity, maxInitialLinearVelocity));
+            rb.angularVelocity = new Vector3(Random.Range(-maxInitialAngularVelocity, maxInitialAngularVelocity), Random.Range(-maxInitialAngularVelocity, maxInitialAngularVelocity), Random.Range(-maxInitialAngularVelocity, maxInitialAngularVelocity));
+            rb.velocity = new Vector3(Random.Range(-maxInitialLinearVelocity, maxInitialLinearVelocity), Random.Range(-maxInitialLinearVelocity, maxInitialLinearVelocity), Random.Range(-maxInitialLinearVelocity, maxInitialLinearVelocity));
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void SetPointHovering(ConnectPoint point)
@@ -74,7 +71,14 @@ public class PowerCore : MonoBehaviour
         }
         else
         {
-            GetComponent<Rigidbody>().isKinematic = false;
+            if (alwaysKinematic)
+            {
+                GetComponent<Rigidbody>().isKinematic = true;                
+            }
+            else
+            {
+                GetComponent<Rigidbody>().isKinematic = false;
+            }
         }
     }
 
