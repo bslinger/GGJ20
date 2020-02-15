@@ -22,6 +22,11 @@ public class Comms : SystemBase
     public Slider signalStrengthSlider;
     public TextMeshProUGUI distanceText;
     public DialogueManager dialogueManager;
+    public GameObject shipIcon;
+    public GameObject shipIconStartReference;
+    public GameObject shipIconEndReference;
+    public GameObject shipIconPowered;
+    public GameObject shipIconUnpowered;
 
     [Header("Distance Settings")]
     public float initialDistance = 1000f;
@@ -33,6 +38,10 @@ public class Comms : SystemBase
     private GameObject dialogueCanvas;
     private TextMeshProUGUI textMesh;
     private float distanceLeft;
+    private Vector3 shipIconStartingPosition;
+    private Vector3 shipIconEndingPosition;
+    private CanvasGroup shipIconPoweredCanvasGroup;
+    private CanvasGroup shipIconUnpoweredCanvasGroup;
 
     [Header("Audio Clips")]
     public AudioClip messageStartAudio;
@@ -69,6 +78,15 @@ public class Comms : SystemBase
         dialogueCanvas = commsUI.transform.Find("Dialogue Canvas").gameObject;
         textMesh = dialogueCanvas.GetComponentInChildren<TextMeshProUGUI>();
         distanceLeft = initialDistance;
+        shipIconPoweredCanvasGroup = shipIconPowered.GetComponent<CanvasGroup>();
+        shipIconUnpoweredCanvasGroup = shipIconUnpowered.GetComponent<CanvasGroup>();
+        if (shipIconStartReference != null && shipIconEndReference != null)
+        {
+            shipIconStartingPosition = shipIconStartReference.transform.localPosition;
+            shipIconEndingPosition = shipIconEndReference.transform.localPosition;
+
+            shipIcon.transform.position = shipIconStartingPosition;
+        }
     }
 
     protected override void UpdateMe()
@@ -106,9 +124,12 @@ public class Comms : SystemBase
             distanceLeft -= fullyPoweredStepPerSecond * (currentParameter / maxParameter);
             distanceLeft = Mathf.Clamp(distanceLeft, 0, initialDistance);
             _percentageOfJourney = 1 - (distanceLeft / initialDistance);
+            shipIconPoweredCanvasGroup.alpha = 1;
+            shipIconUnpoweredCanvasGroup.alpha = 0;
+        } else {
+            shipIconPoweredCanvasGroup.alpha = 0;
+            shipIconUnpoweredCanvasGroup.alpha = 1;
         }
-
-        distanceText.text = "Remaining: " + ((int)distanceLeft).ToString() + "km";
     }
 
     void ChangeToPowered()
@@ -119,7 +140,6 @@ public class Comms : SystemBase
             hasStarted = true;
         }
         commsUI.gameObject.GetComponent<AudioSource>().mute = false;
-        
     }
 
     void ChangeToUnpowered()
@@ -219,8 +239,53 @@ public class Comms : SystemBase
 
     protected override void UpdateUI()
     {
+        if (onText)
+        {
             onText.SetActive(isPowered);
-            offText.SetActive(!isPowered);
+        }
 
+        if (offText)
+        {
+            offText.SetActive(!isPowered);
+        }
+
+        if (statusText != null)
+        {
+            if (isPowered)
+            {
+                if (currentParameter == 1)
+                {
+                    statusText.text = "Full Thrust";
+                }
+                else if (currentParameter > signalThreshold)
+                {
+                    float thrustValue = (currentParameter - signalThreshold) / (maxParameter - signalThreshold);
+                    statusText.text = "Thrust: " + Math.Round(thrustValue * 100) + "%";
+                }
+                else
+                {
+                    statusText.text = "Powering Up";
+                }
+            } else {
+                if (currentParameter > signalThreshold)
+                {
+                    statusText.text = "Slowing";
+                }
+                else
+                {
+                    statusText.text = "No Thrust";
+                }
+            }
+        }
+        if (distanceText != null)
+        {
+            distanceText.text = "Remaining: " + ((int)distanceLeft).ToString() + "km";
+        }
+
+        if (shipIcon != null && shipIconStartingPosition != null && shipIconEndingPosition != null)
+        {
+            shipIcon.transform.localPosition =
+                Vector3.Lerp(shipIconStartingPosition, shipIconEndingPosition, _percentageOfJourney);
+        }
     }
 }

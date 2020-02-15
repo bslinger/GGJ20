@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -16,7 +17,7 @@ public abstract class SystemBase : MonoBehaviour
     [FormerlySerializedAs("panelObject")] [SerializeField] GameObject panelEnabledObject;
     [FormerlySerializedAs("panelDisableddObject")] [SerializeField] GameObject panelDisabledObject;
     [SerializeField] public Slider slider;
-    [SerializeField] TextMeshProUGUI statusText;
+    [SerializeField] public TextMeshProUGUI statusText;
     
     protected float currentParameter;
     protected bool isPowered;
@@ -24,11 +25,13 @@ public abstract class SystemBase : MonoBehaviour
     PowerSource powerSource;
     AudioSource audioSource;
     protected DialogueManager dialogue;
-    
+
+    private CanvasGroup panelEnabledObjectCanvasGroup;
     private Image panelEnabledObjectImage;
     private Color panelEnabledObjectImageVisibleColor;
     private Color panelEnabledObjectImageInvisibleColor;
     
+    private CanvasGroup panelDisabledObjectCanvasGroup;
     private Image panelDisabledObjectImage;
     private Color panelDisabledObjectImageVisibleColor;
     private Color panelDisabledObjectImageInvisibleColor;
@@ -42,20 +45,43 @@ public abstract class SystemBase : MonoBehaviour
     {
         if (panelEnabledObject)
         {
+            panelEnabledObjectCanvasGroup = panelEnabledObject.GetComponent<CanvasGroup>();
             panelEnabledObjectImage = panelEnabledObject.GetComponent<Image>();
-            panelEnabledObjectImageVisibleColor = panelEnabledObjectImageInvisibleColor = panelEnabledObjectImage.color;
-            panelEnabledObjectImageInvisibleColor.a = 0;
+            if (panelEnabledObjectImage)
+            {
+                panelEnabledObjectImageVisibleColor =
+                    panelEnabledObjectImageInvisibleColor = panelEnabledObjectImage.color;
+                panelEnabledObjectImageInvisibleColor.a = 0;
+            } 
         }
         if (panelDisabledObject)
         {
+            panelDisabledObjectCanvasGroup = panelDisabledObject.GetComponent<CanvasGroup>();
             panelDisabledObjectImage = panelDisabledObject.GetComponent<Image>();
-            panelDisabledObjectImageVisibleColor = panelDisabledObjectImageInvisibleColor = panelDisabledObjectImage.color;
-            panelDisabledObjectImageInvisibleColor.a = 0;
+            if (panelDisabledObjectImage)
+            {
+                panelDisabledObjectImageVisibleColor =
+                    panelDisabledObjectImageInvisibleColor = panelDisabledObjectImage.color;
+                panelDisabledObjectImageInvisibleColor.a = 0;
+            }
         }
 
         if (powerSourceObject)
         {
             powerSource = powerSourceObject.GetComponent<PowerSource>();
+            isPowered = powerSource.IsPowered();
+            if (panelEnabledObjectCanvasGroup)
+            {
+                panelEnabledObjectCanvasGroup.alpha = powerSource.IsPowered() ? 1 : 0;
+                Debug.Log(this.GetType()+" is "+(powerSource.IsPowered() ? "powered" : "not powered"));
+                Debug.Log("panelEnabledObjectCanvasGroup.alpha = "+(panelEnabledObjectCanvasGroup.alpha));
+            }
+            if (panelDisabledObjectCanvasGroup)
+            {
+                panelDisabledObjectCanvasGroup.alpha = powerSource.IsPowered() ? 0 : 1;
+                Debug.Log("panelDisabledObjectCanvasGroup.alpha = "+(panelDisabledObjectCanvasGroup.alpha));
+            }
+            
             if (panelEnabledObjectImage)
             {
                 panelEnabledObjectImage.color = powerSource.IsPowered()
@@ -74,11 +100,14 @@ public abstract class SystemBase : MonoBehaviour
             Debug.LogError("Power source has not been assigned for this system. System " + name + " will be disabled.", this);
             gameObject.SetActive(false);
         }
+
+        
         audioSource = GetComponent<AudioSource>();
         currentParameter = startingParameter;
         dialogue = (DialogueManager)FindObjectOfType(typeof(DialogueManager));
         StartMe();
     }
+   
 
     protected virtual void StartMe()
     {
@@ -149,6 +178,10 @@ public abstract class SystemBase : MonoBehaviour
 
     void CheckPower()
     {
+        if (powerSource == null)
+        {
+            return;
+        }
         const int transitionDuration = 1;
         if (isPowered != powerSource.IsPowered()) // If there's been a change
         {
@@ -165,9 +198,24 @@ public abstract class SystemBase : MonoBehaviour
                 animatingPanelColor = false;
                 panelTransitionPercent = 1;
             }
+            if (panelEnabledObjectCanvasGroup)
+            {
+                panelEnabledObjectCanvasGroup.alpha = Mathf.Lerp(
+                    isPowered ? 0 : 1,
+                    isPowered ? 1 : 0,
+                    panelTransitionPercent
+                );
+            }
+            if (panelDisabledObjectCanvasGroup)
+            {
+                panelDisabledObjectCanvasGroup.alpha = Mathf.Lerp(
+                    isPowered ? 1 : 0,
+                    isPowered ? 0 : 1,
+                    panelTransitionPercent
+                );
+            }
             if (panelEnabledObjectImage)
             {
-                Debug.Log("Animating panelEnabledObjectImage.color");
                 panelEnabledObjectImage.color = Color.Lerp(
                     isPowered ? panelEnabledObjectImageInvisibleColor : panelEnabledObjectImageVisibleColor,
                     isPowered ? panelEnabledObjectImageVisibleColor : panelEnabledObjectImageInvisibleColor,
@@ -176,7 +224,6 @@ public abstract class SystemBase : MonoBehaviour
             }
             if (panelDisabledObjectImage)
             {
-                Debug.Log("Animating panelDisabledObjectImage.color");
                 panelDisabledObjectImage.color = Color.Lerp(
                     isPowered ? panelDisabledObjectImageVisibleColor : panelDisabledObjectImageInvisibleColor,
                     isPowered ? panelDisabledObjectImageInvisibleColor : panelDisabledObjectImageVisibleColor,
