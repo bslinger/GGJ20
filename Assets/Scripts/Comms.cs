@@ -249,6 +249,8 @@ public class Comms : SystemBase
             offText.SetActive(!isPowered);
         }
 
+        float thrustValue = (currentParameter - signalThreshold) / (maxParameter - signalThreshold);
+        
         if (statusText != null)
         {
             if (isPowered)
@@ -259,7 +261,6 @@ public class Comms : SystemBase
                 }
                 else if (currentParameter > signalThreshold)
                 {
-                    float thrustValue = (currentParameter - signalThreshold) / (maxParameter - signalThreshold);
                     statusText.text = "Thrust: " + Math.Round(thrustValue * 100) + "%";
                 }
                 else
@@ -269,7 +270,8 @@ public class Comms : SystemBase
             } else {
                 if (currentParameter > signalThreshold)
                 {
-                    statusText.text = "Slowing";
+                    statusText.text = "Thrust: " + Math.Round(thrustValue * 100) + "%";
+                    //statusText.text = "Slowing";
                 }
                 else
                 {
@@ -279,7 +281,7 @@ public class Comms : SystemBase
         }
         if (distanceText != null)
         {
-            distanceText.text = "Remaining: " + ((int)distanceLeft).ToString() + "km";
+            distanceText.text = "Remaining: " + ((int)distanceLeft).ToString("n0") + "km";
         }
 
         if (shipIcon != null && shipIconStartingPosition != null && shipIconEndingPosition != null)
