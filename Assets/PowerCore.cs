@@ -73,11 +73,11 @@ public class PowerCore : MonoBehaviour
         {
             if (alwaysKinematic)
             {
-                GetComponent<Rigidbody>().isKinematic = true;                
+                rb.isKinematic = true;                
             }
             else
             {
-                GetComponent<Rigidbody>().isKinematic = false;
+                rb.isKinematic = false;
             }
         }
     }

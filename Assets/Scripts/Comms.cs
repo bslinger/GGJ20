@@ -121,7 +121,7 @@ public class Comms : SystemBase
         // change distance based on current signal strength
         if (currentParameter > signalThreshold)
         {
-            distanceLeft -= fullyPoweredStepPerSecond * (currentParameter / maxParameter);
+            distanceLeft -= (fullyPoweredStepPerSecond * (currentParameter / maxParameter)) * Time.deltaTime;
             distanceLeft = Mathf.Clamp(distanceLeft, 0, initialDistance);
             _percentageOfJourney = 1 - (distanceLeft / initialDistance);
             shipIconPoweredCanvasGroup.alpha = 1;
