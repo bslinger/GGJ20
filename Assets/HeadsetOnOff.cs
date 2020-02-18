@@ -16,10 +16,7 @@ public class HeadsetOnOff : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (activeAction.GetActive(input))
-        {
-            enableHeadset();
-        }
+
         activeAction.AddOnStateDownListener(this.HeadsetOn, input);
         activeAction.AddOnStateUpListener(this.HeadsetOff, input);
     }
